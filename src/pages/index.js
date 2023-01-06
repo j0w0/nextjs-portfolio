@@ -1,7 +1,7 @@
 import styles from "../styles/Home.module.css";
 import HTMLHead from "../components/HTMLHead/HTMLHead";
 
-export default function Home() {
+export default function Home({ page }) {
   return (
     <>
       <HTMLHead title="Home!" />
@@ -10,4 +10,12 @@ export default function Home() {
       </main>
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  return {
+    props: {
+      page: {},
+    },
+  };
 }

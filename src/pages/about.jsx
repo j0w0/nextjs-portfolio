@@ -1,6 +1,6 @@
 import HTMLHead from "../components/HTMLHead/HTMLHead";
 
-export default function About() {
+export default function About({ page }) {
   return (
     <>
       <HTMLHead title="About!" />
@@ -9,4 +9,12 @@ export default function About() {
       </main>
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  return {
+    props: {
+      page: {},
+    },
+  };
 }

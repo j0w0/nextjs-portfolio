@@ -1,6 +1,6 @@
 import HTMLHead from "../components/HTMLHead/HTMLHead";
 
-export default function Contact() {
+export default function Contact({ page }) {
   return (
     <>
       <HTMLHead title="Contact!" />
@@ -9,4 +9,12 @@ export default function Contact() {
       </main>
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  return {
+    props: {
+      page: {},
+    },
+  };
 }
