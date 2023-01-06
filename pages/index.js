@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import HTMLHead from "../components/Head/Head";
+import HTMLHead from "../components/HTMLHead/HTMLHead";
 
 export default function Home() {
   return (
