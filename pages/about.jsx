@@ -1,6 +1,6 @@
 import HTMLHead from "../components/HTMLHead/HTMLHead";
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <HTMLHead title="About!" />
