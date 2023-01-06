@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <>
       <HTMLHead title="Home!" />
-      <main className={styles.main}>Home</main>
+      <main className={styles.main}>
+        <h1 className="font-secondary">j0w0</h1>
+      </main>
     </>
   );
 }
