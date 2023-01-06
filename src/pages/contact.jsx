@@ -4,7 +4,9 @@ export default function Contact() {
   return (
     <>
       <HTMLHead title="Contact!" />
-      <main>Contact</main>
+      <main>
+        <h1 className="font-secondary">Contact</h1>
+      </main>
     </>
   );
 }

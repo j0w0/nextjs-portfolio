@@ -4,7 +4,9 @@ export default function About() {
   return (
     <>
       <HTMLHead title="About!" />
-      <main>About</main>
+      <main>
+        <h1 className="font-secondary">About</h1>
+      </main>
     </>
   );
 }
