@@ -1,5 +1,6 @@
 const API_URL = process.env.WORDPRESS_API_URL;
 
+// fetch util function
 async function fetchAPI(query = "", { variables } = {}) {
   const headers = { "Content-Type": "application/json" };
 
@@ -21,6 +22,7 @@ async function fetchAPI(query = "", { variables } = {}) {
   return json.data;
 }
 
+// get all portfolio posts in "Interactive" category
 export async function getInteractivePortfolioPosts() {
   const results = await fetchAPI(`{
     projectCategories(where: {name: "Interactive"}) {
@@ -44,6 +46,7 @@ export async function getInteractivePortfolioPosts() {
   return results?.projectCategories?.edges[0]?.node?.projects?.edges;
 }
 
+// get single portfolio post
 export async function getPortfolioPost(slug) {
   const results = await fetchAPI(
     `{
@@ -63,6 +66,7 @@ export async function getPortfolioPost(slug) {
   return results?.projectBy;
 }
 
+// get all pages
 export async function getPages() {
   const results = await fetchAPI(`{
     pages {
@@ -74,4 +78,24 @@ export async function getPages() {
     }
   }`);
   return results?.pages?.edges;
+}
+
+// get single page by slug
+export async function getPageBySlug(slug) {
+  const results = await fetchAPI(
+    `{
+    pages(where: {name: "${slug}"}) {
+      edges {
+        node {
+          id
+          pageId
+          slug
+          title
+          content
+        }
+      }
+    }
+  }`
+  );
+  return results?.pages?.edges[0].node;
 }
