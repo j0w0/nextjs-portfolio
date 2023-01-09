@@ -34,14 +34,15 @@ export async function getInteractivePortfolioPosts() {
             edges {
               node {
                 id
+                databaseId
                 slug
                 title
                 websiteUrl
                 featuredImage {
                   node {
                     id
-                    altText
                     databaseId
+                    altText
                     mediaItemUrl
                     srcSet
                     mimeType
@@ -66,7 +67,8 @@ export async function getInteractivePortfolioPosts() {
       }
     }
   }`);
-  return results?.projectCategories?.edges[0]?.node?.projects?.edges;
+  const posts = results?.projectCategories?.edges[0]?.node?.projects?.edges;
+  return posts.map((post) => post.node);
 }
 
 // get single portfolio post
@@ -75,7 +77,7 @@ export async function getPortfolioPost(slug) {
     `{
     projectBy(slug: "${slug}") {
       id
-      projectId
+      databaseId
       slug
       content
       title
@@ -83,8 +85,8 @@ export async function getPortfolioPost(slug) {
       featuredImage {
         node {
           id
-          altText
           databaseId
+          altText
           mediaItemUrl
           srcSet
           mimeType
@@ -98,8 +100,8 @@ export async function getPortfolioPost(slug) {
         edges {
           node {
             id
-            altText
             databaseId
+            altText
             mediaItemUrl
             srcSet
             mimeType
