@@ -1,3 +1,3 @@
 export default function Footer() {
-  return <>j0w0 footer</>;
+  return <footer>josh woodcock</footer>;
 }
