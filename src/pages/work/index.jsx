@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import HTMLHead from "../../components/HTMLHead/HTMLHead";
 import { getInteractivePortfolioPosts } from "../../lib/wp-graphql";
 
@@ -11,8 +12,16 @@ export default function Portfolio({ projects }) {
         <ul>
           {projects.map((project, idx) => {
             project = project.node;
+            const { mediaItemUrl, altText, mediaDetails } =
+              project.featuredImage.node;
             return (
               <li key={project.id}>
+                <Image
+                  src={mediaItemUrl}
+                  alt={altText}
+                  width={mediaDetails.width}
+                  height={mediaDetails.height}
+                />
                 <Link href={`/work/${encodeURIComponent(project.slug)}`}>
                   {project.title}
                 </Link>

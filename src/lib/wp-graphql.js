@@ -34,8 +34,31 @@ export async function getInteractivePortfolioPosts() {
             edges {
               node {
                 id
-                title
                 slug
+                title
+                websiteUrl
+                featuredImage {
+                  node {
+                    id
+                    altText
+                    databaseId
+                    mediaItemUrl
+                    srcSet
+                    mimeType
+                    mediaDetails {
+                      height
+                      width
+                    }
+                  }
+                }
+                projectTags {
+                  edges {
+                    node {
+                      id
+                      name
+                    }
+                  }
+                }
               }
             }
           }
@@ -57,6 +80,44 @@ export async function getPortfolioPost(slug) {
       content
       title
       websiteUrl
+      featuredImage {
+        node {
+          id
+          altText
+          databaseId
+          mediaItemUrl
+          srcSet
+          mimeType
+          mediaDetails {
+            height
+            width
+          }
+        }
+      }
+      attachedMedia {
+        edges {
+          node {
+            id
+            altText
+            databaseId
+            mediaItemUrl
+            srcSet
+            mimeType
+            mediaDetails {
+              height
+              width
+            }
+          }
+        }
+      }
+      projectTags {
+        edges {
+          node {
+            id
+            name
+          }
+        }
+      }
     }
   }`,
     {
