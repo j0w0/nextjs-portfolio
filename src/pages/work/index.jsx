@@ -9,7 +9,7 @@ export default function Portfolio({ projects }) {
     <>
       <HTMLHead title="Work" />
       <main>
-        <h1 className="font-secondary">Portfolio of work</h1>
+        <h1 className="font-secondary">Portfolio of Work</h1>
         <ul>
           {projects.map((project) => {
             const { mediaItemUrl, altText, mediaDetails, blurDataURL } =
