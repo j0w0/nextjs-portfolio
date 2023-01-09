@@ -1,3 +1,4 @@
+import styles from "../styles/Page.module.scss";
 import HTMLHead from "../components/HTMLHead/HTMLHead";
 import { getPageBySlug } from "../lib/wp-graphql";
 
@@ -6,7 +7,7 @@ export default function About({ page }) {
   return (
     <>
       <HTMLHead title={title} />
-      <main>
+      <main className={styles.main}>
         <h1 className="font-secondary">{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: content }} />
       </main>

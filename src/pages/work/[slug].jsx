@@ -1,3 +1,4 @@
+import styles from "../../styles/Page.module.scss";
 import HTMLHead from "../../components/HTMLHead/HTMLHead";
 import {
   getInteractivePortfolioPosts,
@@ -9,7 +10,7 @@ export default function Post({ post }) {
   return (
     <>
       <HTMLHead title={title} />
-      <main>
+      <main className={styles.main}>
         <h1 className="font-secondary">{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: content }} />
       </main>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import styles from "../../styles/Page.module.scss";
 import HTMLHead from "../../components/HTMLHead/HTMLHead";
 import { getInteractivePortfolioPosts } from "../../lib/wp-graphql";
 import { getPlaiceholder } from "plaiceholder";
@@ -8,7 +9,7 @@ export default function Portfolio({ projects }) {
   return (
     <>
       <HTMLHead title="Work" />
-      <main>
+      <main className={styles.main}>
         <h1 className="font-secondary">Portfolio of Work</h1>
         <ul>
           {projects.map((project) => {

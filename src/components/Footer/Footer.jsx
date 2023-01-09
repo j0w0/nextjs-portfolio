@@ -1,3 +1,9 @@
+import styles from "./Footer.module.scss";
+
 export default function Footer() {
-  return <footer>josh woodcock</footer>;
+  return (
+    <footer className={styles.footer}>
+      josh woodcock // front-end developer
+    </footer>
+  );
 }
