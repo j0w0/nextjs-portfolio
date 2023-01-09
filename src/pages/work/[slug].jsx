@@ -34,7 +34,6 @@ export async function getStaticPaths() {
   const interactivePosts = await getInteractivePortfolioPosts();
 
   const portfolioPaths = interactivePosts.map((project) => {
-    project = project.node;
     return {
       params: {
         slug: project.slug,
