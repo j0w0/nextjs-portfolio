@@ -9,6 +9,10 @@
     @apply my-4;
   }
 
+  p + p {
+    margin-top: 0;
+  }
+
   blockquote,
   figure {
     @apply my-4 mx-10;
