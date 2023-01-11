@@ -1,40 +1,43 @@
 @import url("normalize.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html,
 body {
-    font-family: var(--font-primary);
+  font-family: var(--font-primary);
 }
 
 .font-primary {
-    font-family: var(--font-primary);
+  font-family: var(--font-primary);
 }
 
 .font-secondary {
-    font-family: var(--font-secondary);
+  font-family: var(--font-secondary);
 }
 
 #__next {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-#__next>main {
-    flex: 1;
+#__next > main {
+  flex: 1;
 }
 
 img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 img.alignleft {
-    width: unset;
+  width: unset;
 }
