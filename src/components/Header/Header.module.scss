@@ -9,6 +9,15 @@
     letter-spacing: -0.1rem;
   }
 
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: yellow;
+    }
+  }
+
   nav {
     margin-left: 20px;
     ul {
