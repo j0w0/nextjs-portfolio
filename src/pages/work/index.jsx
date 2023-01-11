@@ -10,28 +10,32 @@ export default function Portfolio({ projects }) {
     <>
       <HTMLHead title="Work" />
       <main className={styles.main}>
-        <h1 className="font-secondary">Portfolio of Work</h1>
-        <ul>
-          {projects.map((project) => {
-            const { mediaItemUrl, altText, mediaDetails, blurDataURL } =
-              project.featuredImage;
-            return (
-              <li key={project.databaseId}>
-                <Image
-                  src={mediaItemUrl}
-                  alt={altText}
-                  width={mediaDetails.width}
-                  height={mediaDetails.height}
-                  placeholder="blur"
-                  blurDataURL={blurDataURL}
-                />
-                <Link href={`/work/${encodeURIComponent(project.slug)}`}>
-                  {project.title}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <div className="container">
+          <h1 className="font-secondary">Web Development</h1>
+          <p>Updated content + projects coming soon!</p>
+
+          <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-6 xl:grid-cols-4 xl:gap-8">
+            {projects.map((project) => {
+              const { mediaItemUrl, altText, mediaDetails, blurDataURL } =
+                project.featuredImage;
+              return (
+                <div key={project.databaseId}>
+                  <Link href={`/work/${encodeURIComponent(project.slug)}`}>
+                    <Image
+                      src={mediaItemUrl}
+                      alt={altText}
+                      width={mediaDetails.width}
+                      height={mediaDetails.height}
+                      placeholder="blur"
+                      blurDataURL={blurDataURL}
+                    />
+                    {project.title}
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </main>
     </>
   );

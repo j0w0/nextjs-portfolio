@@ -5,6 +5,9 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx}",
   ],
   theme: {
+    container: {
+      center: true,
+    },
     fontFamily: {
       sans: ["Arimo", "sans-serif"],
       serif: ["IBM_Plex_Mono", "serif"],
