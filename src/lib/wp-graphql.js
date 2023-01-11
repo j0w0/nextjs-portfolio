@@ -136,6 +136,8 @@ export async function getPages() {
       edges {
         node {
           slug
+          title
+          content
         }
       }
     }

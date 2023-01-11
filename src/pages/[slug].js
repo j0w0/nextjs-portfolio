@@ -1,6 +1,6 @@
 import styles from "../styles/Page.module.scss";
 import HTMLHead from "../components/HTMLHead/HTMLHead";
-import { getPageBySlug } from "../lib/wp-graphql";
+import { getPages, getPageBySlug } from "../lib/wp-graphql";
 
 export default function Contact({ page }) {
   const { pageId, slug, title, content } = page;
@@ -15,11 +15,29 @@ export default function Contact({ page }) {
   );
 }
 
-export async function getStaticProps() {
-  const page = await getPageBySlug("contact");
+export async function getStaticProps({ params }) {
+  const page = await getPageBySlug(params?.slug);
   return {
     props: {
       page: page,
     },
+    revalidate: 10,
+  };
+}
+
+export async function getStaticPaths() {
+  const pages = await getPages();
+
+  const pagePaths = pages.map((page) => {
+    return {
+      params: {
+        slug: page?.node?.slug,
+      },
+    };
+  });
+
+  return {
+    paths: pagePaths,
+    fallback: false,
   };
 }
