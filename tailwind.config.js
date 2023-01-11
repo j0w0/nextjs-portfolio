@@ -5,7 +5,15 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ["Arimo", "sans-serif"],
+      serif: ["IBM_Plex_Mono", "serif"],
+    },
+    extend: {
+      fontFamily: {
+        heading: ["IBM_Plex_Mono", "serif"],
+      },
+    },
   },
   plugins: [],
 };

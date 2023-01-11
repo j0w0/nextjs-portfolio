@@ -5,6 +5,10 @@
   align-items: center;
   justify-content: space-between;
 
+  & > a {
+    letter-spacing: -0.1rem;
+  }
+
   nav {
     margin-left: 20px;
     ul {

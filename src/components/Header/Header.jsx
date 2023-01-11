@@ -3,8 +3,10 @@ import styles from "./Header.module.scss";
 
 export default function Header() {
   return (
-    <header className={styles.header}>
-      <Link href="/">j0w0</Link>
+    <header className={`${styles.header} bg-indigo-900 text-white`}>
+      <Link href="/" className="font-secondary text-2xl">
+        Josh Woodcock
+      </Link>
       <nav>
         <ul>
           <li>

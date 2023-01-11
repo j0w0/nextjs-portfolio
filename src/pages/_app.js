@@ -1,4 +1,4 @@
-import "../styles/globals.scss";
+import "../styles/globals.css";
 import { Arimo, IBM_Plex_Mono } from "@next/font/google";
 import Layout from "../components/Layout/Layout";
 
