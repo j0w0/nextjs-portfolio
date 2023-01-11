@@ -28,6 +28,7 @@ export default function Home({ page }) {
           <br />
           230110 - added tailwindcss, not sure if i like it over bootstrap
           <br />
+          230111 - added grid/columns to work page
         </p>
         <p>
           check out my{" "}
