@@ -10,6 +10,10 @@ export default function Contact({ page }) {
       <main className={styles.main}>
         <h1 className="font-secondary">{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: content }} />
+
+        {slug === "contact" && (
+          <p>Contact form coming soon! Use the LinkedIn link above 🔗</p>
+        )}
       </main>
     </>
   );

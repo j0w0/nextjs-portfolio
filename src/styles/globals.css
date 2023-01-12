@@ -8,14 +8,6 @@
   margin: 0;
 }
 
-.font-primary {
-  font-family: var(--font-primary);
-}
-
-.font-secondary {
-  font-family: var(--font-secondary);
-}
-
 #__next {
   display: flex;
   min-height: 100vh;

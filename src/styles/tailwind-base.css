@@ -2,7 +2,11 @@
 
 @layer base {
   a {
-    @apply text-blue-700 underline;
+    @apply underline underline-offset-2;
+  }
+
+  a:hover {
+    @apply bg-amber-400;
   }
 
   p {
@@ -19,31 +23,40 @@
   }
 
   hr {
-    @apply border;
+    @apply border my-3;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
   }
 
   h1 {
-    @apply text-4xl font-bold my-2;
+    @apply text-4xl my-2;
   }
 
   h2 {
-    @apply text-2xl font-bold my-3;
+    @apply text-2xl my-3;
   }
 
   h3 {
-    @apply text-lg font-bold my-4;
+    @apply text-lg my-4;
   }
 
   h4 {
-    @apply text-base font-bold my-5;
+    @apply text-base my-5;
   }
 
   h5 {
-    @apply text-sm font-bold my-6;
+    @apply text-sm my-6;
   }
 
   h6 {
-    @apply text-xs font-bold my-10;
+    @apply text-xs my-10;
   }
 
   ul,

@@ -7,14 +7,15 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      padding: "1rem",
     },
     fontFamily: {
       sans: ["Arimo", "sans-serif"],
-      serif: ["IBM_Plex_Mono", "serif"],
+      serif: ["Bungee", "serif"],
     },
     extend: {
       fontFamily: {
-        heading: ["IBM_Plex_Mono", "serif"],
+        heading: ["Bungee", "serif"],
       },
     },
   },
