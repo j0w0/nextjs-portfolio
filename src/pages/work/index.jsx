@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../../styles/Page.module.scss";
 import HTMLHead from "../../components/HTMLHead/HTMLHead";
 import { getInteractivePortfolioPosts } from "../../lib/wp-graphql";
 import { getPlaiceholder } from "plaiceholder";
@@ -9,7 +8,7 @@ export default function Portfolio({ projects }) {
   return (
     <>
       <HTMLHead title="Work" />
-      <main className={styles.main}>
+      <main className="flex flex-col p-5">
         <div className="container">
           <h1 className="font-secondary">Web Development</h1>
           <p>Updated content + projects coming soon!</p>

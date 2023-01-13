@@ -7,7 +7,7 @@ export default function Contact({ page }) {
   return (
     <>
       <HTMLHead title={title} />
-      <main className={styles.main}>
+      <main className="flex flex-col p-5">
         <h1 className="font-secondary">{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: content }} />
 
