@@ -19,7 +19,7 @@ const PATHS = [
   },
 ];
 
-const Menu = ({ mobile = false }) => {
+const Menu = ({ mobile = false, handleMobileMenuVisibility = null }) => {
   let menuBase = `list-none p-0 flex gap-1 text-base`;
   let linkBase = `no-underline hover:bg-inherit`;
 
@@ -36,7 +36,11 @@ const Menu = ({ mobile = false }) => {
       {PATHS.map((path) => {
         return (
           <li key={path.name}>
-            <Link href={path.href} className={linkClasses}>
+            <Link
+              href={path.href}
+              className={linkClasses}
+              onClick={handleMobileMenuVisibility}
+            >
               {path.name}
             </Link>
           </li>
@@ -49,18 +53,19 @@ const Menu = ({ mobile = false }) => {
 export default function Navigation() {
   const { windowWidth, windowHeight } = useWindowDimensions();
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
-  const handleMobileMenu = () => setMobileMenuVisible(!mobileMenuVisible);
+  const handleMobileMenuVisibility = () =>
+    setMobileMenuVisible(!mobileMenuVisible);
 
   return (
     <nav>
       {windowWidth > 768 ? (
-        <Menu />
+        <Menu handleMobileMenuVisibility={handleMobileMenuVisibility} />
       ) : (
         <>
           <FontAwesomeIcon
             icon={faBars}
             className="cursor-pointer"
-            onClick={handleMobileMenu}
+            onClick={handleMobileMenuVisibility}
             size="2x"
           />
           <div
@@ -86,11 +91,14 @@ export default function Navigation() {
               <FontAwesomeIcon
                 icon={faXmark}
                 className="cursor-pointer"
-                onClick={handleMobileMenu}
+                onClick={handleMobileMenuVisibility}
                 size="xl"
               />
             </div>
-            <Menu mobile={true} />
+            <Menu
+              mobile={true}
+              handleMobileMenuVisibility={handleMobileMenuVisibility}
+            />
           </div>
         </>
       )}
