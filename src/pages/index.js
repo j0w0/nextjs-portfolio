@@ -5,7 +5,7 @@ export default function Home({ page }) {
   return (
     <>
       <HTMLHead title="Josh Woodcock / Front-End Developer" />
-      <main className="flex flex-col p-5">
+      <main className="flex flex-col p-4">
         <h1>{page.greeting}, I&rsquo;m Josh</h1>
 
         <p>

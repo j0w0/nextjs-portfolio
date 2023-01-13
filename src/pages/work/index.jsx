@@ -8,7 +8,7 @@ export default function Portfolio({ projects }) {
   return (
     <>
       <HTMLHead title="Work" />
-      <main className="flex flex-col p-5">
+      <main className="flex flex-col p-4">
         <div className="container">
           <h1 className="font-secondary">Web Development</h1>
           <p>Updated content + projects coming soon!</p>
