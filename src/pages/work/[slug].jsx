@@ -6,13 +6,26 @@ import {
 } from "../../lib/wp-graphql";
 
 export default function Post({ post }) {
-  const { projectId, slug, title, content, websiteUrl } = post;
+  console.log(post);
+  const { projectId, slug, title, content, websiteUrl, projectTags } = post;
   return (
     <>
       <HTMLHead title={title} />
       <main className={styles.main}>
         <h1 className="font-secondary">{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: content }} />
+
+        <ul className="list-none p-0 flex items-center flex-wrap gap-2">
+          {projectTags.edges.map((tag) => {
+            const key = tag.node.id;
+            const name = tag.node.name;
+            return (
+              <li key={key} className="px-2 py-1 bg-zinc-100">
+                {name}
+              </li>
+            );
+          })}
+        </ul>
       </main>
     </>
   );
