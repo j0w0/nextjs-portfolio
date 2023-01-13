@@ -10,8 +10,8 @@ export default function PageHeading({ title, subtitle, buttons }) {
       bg-center
     "
     >
-      <div className="container pt-10 pb-14">
-        <h1 className="mb-6">{title}</h1>
+      <div className="container pt-10 pb-12">
+        <h1 className={subtitle && `mb-6`}>{title}</h1>
         {subtitle && <h2 className="mb-8">{subtitle}</h2>}
         {buttons && (
           <div className="font-heading flex flex-row flex-wrap gap-2">
