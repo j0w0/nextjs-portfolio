@@ -99,9 +99,7 @@ export default function Home({ page }) {
             </li>
             <li>230111 - added tailwind classes for structure and styling</li>
             <li>230112 - added project tags</li>
-            <li>
-              230113 - added project images and continue styling with tailwind
-            </li>
+            <li>230113 - added project images, tailwind styles, mobile menu</li>
           </ul>
         </div>
       </section>
