@@ -16,7 +16,7 @@ export default function Home({ page }) {
 
   return (
     <>
-      <HTMLHead title="Josh Woodcock // Front-End Developer" />
+      <HTMLHead title="Josh Woodcock // Front-End Developer" home={true} />
 
       <PageHeading
         title={

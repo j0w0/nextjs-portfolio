@@ -8,8 +8,8 @@ import PageHeading from "../../components/PageHeading/PageHeading";
 export default function Portfolio({ projects }) {
   return (
     <>
-      <HTMLHead title="Web Development Work" />
-      <PageHeading title="Web Development Work" />
+      <HTMLHead title="Web Development" />
+      <PageHeading title="Web Development" />
       <section className="flex flex-col">
         <div className="container pt-12 pb-10">
           <div
