@@ -1,21 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import Navigation from "../Navigation/Navigation";
 import Logo from "../../../public/web-logo.svg";
-
-const PATHS = [
-  {
-    href: "/about",
-    name: "about",
-  },
-  {
-    href: "/work",
-    name: "work",
-  },
-  {
-    href: "/contact",
-    name: "contact",
-  },
-];
 
 export default function Header() {
   return (
@@ -35,22 +21,7 @@ export default function Header() {
           Front-End Developer
         </h1>
       </Link>
-      <nav>
-        <menu className="list-none p-0 flex items-center flex-wrap gap-1 text-base">
-          {PATHS.map((path) => {
-            return (
-              <li key={path.name}>
-                <Link
-                  href={path.href}
-                  className="no-underline p-2 hover:underline"
-                >
-                  {path.name}
-                </Link>
-              </li>
-            );
-          })}
-        </menu>
-      </nav>
+      <Navigation />
     </header>
   );
 }
