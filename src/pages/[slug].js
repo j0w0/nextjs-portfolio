@@ -1,4 +1,3 @@
-import styles from "../styles/Page.module.scss";
 import HTMLHead from "../components/HTMLHead/HTMLHead";
 import { getPages, getPageBySlug } from "../lib/wp-graphql";
 
