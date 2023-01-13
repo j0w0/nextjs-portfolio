@@ -3,7 +3,7 @@
 @layer base {
   html,
   body {
-    @apply text-slate-800;
+    @apply text-neutral-900;
   }
 
   a {
@@ -11,7 +11,7 @@
   }
 
   a:hover {
-    @apply bg-amber-400 text-black;
+    @apply bg-amber-400;
   }
 
   p {
@@ -96,5 +96,9 @@
 
   pre {
     @apply my-4;
+  }
+
+  img {
+    @apply block w-full h-auto;
   }
 }

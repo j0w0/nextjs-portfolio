@@ -5,7 +5,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Header />
-      {children}
+      <main className="flex flex-col">{children}</main>
       <Footer />
     </>
   );

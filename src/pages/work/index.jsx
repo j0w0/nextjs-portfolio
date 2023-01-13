@@ -3,17 +3,28 @@ import Image from "next/image";
 import HTMLHead from "../../components/HTMLHead/HTMLHead";
 import { getInteractivePortfolioPosts } from "../../lib/wp-graphql";
 import { getPlaiceholder } from "plaiceholder";
+import PageHeading from "../../components/PageHeading/PageHeading";
 
 export default function Portfolio({ projects }) {
   return (
     <>
-      <HTMLHead title="Work" />
-      <main className="flex flex-col p-4">
-        <div className="container">
-          <h1 className="font-secondary">Web Development</h1>
-          <p>Updated content + projects coming soon!</p>
-
-          <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-6 xl:grid-cols-4 xl:gap-8">
+      <HTMLHead title="Web Development Work" />
+      <PageHeading title="Web Development Work" />
+      <section className="flex flex-col">
+        <div className="container pt-12 pb-10">
+          <div
+            className="
+            grid
+            grid-cols-1
+            gap-2
+            md:grid-cols-2
+            md:gap-4
+            lg:grid-cols-3
+            lg:gap-6
+            xl:grid-cols-4
+            xl:gap-8
+            "
+          >
             {projects.map((project) => {
               const { mediaItemUrl, altText, mediaDetails, blurDataURL } =
                 project.featuredImage;
@@ -35,7 +46,7 @@ export default function Portfolio({ projects }) {
             })}
           </div>
         </div>
-      </main>
+      </section>
     </>
   );
 }

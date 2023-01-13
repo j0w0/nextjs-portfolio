@@ -1,4 +1,5 @@
 import HTMLHead from "../components/HTMLHead/HTMLHead";
+import PageHeading from "../components/PageHeading/PageHeading";
 import { getPages, getPageBySlug } from "../lib/wp-graphql";
 
 export default function Contact({ page }) {
@@ -6,14 +7,16 @@ export default function Contact({ page }) {
   return (
     <>
       <HTMLHead title={title} />
-      <main className="flex flex-col p-4">
-        <h1 className="font-secondary">{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+      <PageHeading title={title} />
+      <section className="flex flex-col">
+        <div className="container pt-6 pb-10">
+          <div dangerouslySetInnerHTML={{ __html: content }} />
 
-        {slug === "contact" && (
-          <p>Contact form coming soon! Use the LinkedIn link above 🔗</p>
-        )}
-      </main>
+          {slug === "contact" && (
+            <p>Contact form coming soon! Use the LinkedIn link above 🔗</p>
+          )}
+        </div>
+      </section>
     </>
   );
 }
