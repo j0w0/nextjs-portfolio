@@ -9,7 +9,7 @@ export default function Home({ page }) {
       name: "Check out my Github",
     },
     {
-      href: "//resume.j0w0.com",
+      href: "http://resume.j0w0.com",
       name: "View my Resume",
     },
   ];
