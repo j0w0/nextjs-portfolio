@@ -87,7 +87,13 @@ export default function Navigation() {
           `}
           >
             <div className="flex flex-row items-center justify-between border-b border-amber-400 pb-4">
-              <div className="font-bold">j0w0</div>
+              <Link
+                href="/"
+                className="font-bold no-underline hover:text-amber-400 hover:bg-inherit"
+                onClick={handleMobileMenuVisibility}
+              >
+                j0w0
+              </Link>
               <FontAwesomeIcon
                 icon={faXmark}
                 className="cursor-pointer"
