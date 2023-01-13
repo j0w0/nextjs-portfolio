@@ -39,7 +39,7 @@ export default function Header() {
               <li key={path.name}>
                 <Link
                   href={path.href}
-                  className="no-underline p-2 hover:bg-black hover:text-amber-400"
+                  className="no-underline p-2 hover:underline"
                 >
                   {path.name}
                 </Link>
