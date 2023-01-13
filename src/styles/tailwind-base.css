@@ -1,12 +1,17 @@
 @tailwind base;
 
 @layer base {
+  html,
+  body {
+    @apply text-gray-800;
+  }
+
   a {
     @apply underline underline-offset-2;
   }
 
   a:hover {
-    @apply bg-amber-400;
+    @apply bg-amber-400 text-black;
   }
 
   p {

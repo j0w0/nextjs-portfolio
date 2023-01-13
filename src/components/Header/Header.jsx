@@ -20,7 +20,10 @@ const PATHS = [
 export default function Header() {
   return (
     <header className="bg-amber-400 px-4 py-1 flex justify-between items-center">
-      <Link href="/" className="no-underline flex items-center gap-1">
+      <Link
+        href="/"
+        className="no-underline flex items-center gap-1 hover:text-inherit"
+      >
         <Image
           src={Logo}
           className="w-10 h-10"

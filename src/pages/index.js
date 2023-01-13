@@ -53,8 +53,10 @@ export default function Home({ page }) {
             230110 - added tailwindcss, not sure if i like it over bootstrap
           </li>
           <li>230111 - added tailwind classes for structure and styling</li>
-          <li>230112 - add tags to projects</li>
-          <li>230113 - add attached media images to projects</li>
+          <li>230112 - added project tags</li>
+          <li>
+            230113 - added project images and continue styling with tailwind
+          </li>
         </ul>
       </main>
     </>
