@@ -53,6 +53,8 @@ export default function Home({ page }) {
             230110 - added tailwindcss, not sure if i like it over bootstrap
           </li>
           <li>230111 - added tailwind classes for structure and styling</li>
+          <li>230112 - add tags to projects</li>
+          <li>230113 - add attached media images to projects</li>
         </ul>
       </main>
     </>
@@ -72,11 +74,3 @@ export async function getServerSideProps() {
     },
   };
 }
-
-// export async function getStaticProps(context) {
-//   return {
-//     props: {
-//       page: {},
-//     },
-//   };
-// }
