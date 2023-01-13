@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -56,9 +56,13 @@ export default function Navigation() {
   const handleMobileMenuVisibility = () =>
     setMobileMenuVisible(!mobileMenuVisible);
 
+  useEffect(() => {
+    if (windowWidth > 767) setMobileMenuVisible(false);
+  }, [windowWidth]);
+
   return (
     <nav>
-      {windowWidth > 768 ? (
+      {windowWidth > 767 ? (
         <Menu handleMobileMenuVisibility={handleMobileMenuVisibility} />
       ) : (
         <>
