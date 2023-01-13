@@ -5,11 +5,11 @@ import PageHeading from "../components/PageHeading/PageHeading";
 export default function Home({ page }) {
   const LINKS = [
     {
-      href: "https://www.github.com/j0w00",
+      href: "//www.github.com/j0w00",
       name: "Check out my Github",
     },
     {
-      href: "https://resume.j0w0.com",
+      href: "//resume.j0w0.com",
       name: "View my Resume",
     },
   ];
