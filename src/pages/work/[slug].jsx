@@ -6,7 +6,6 @@ import {
 } from "../../lib/wp-graphql";
 
 export default function Post({ post }) {
-  console.log(post);
   const { projectId, slug, title, content, websiteUrl, projectTags } = post;
   return (
     <>
