@@ -68,7 +68,7 @@ export default function Navigation() {
         <>
           <FontAwesomeIcon
             icon={faBars}
-            className="cursor-pointer"
+            className="cursor-pointer md:hidden"
             onClick={handleMobileMenuVisibility}
             size="2x"
           />

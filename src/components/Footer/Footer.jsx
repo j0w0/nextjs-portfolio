@@ -5,7 +5,7 @@ export default function Footer() {
         josh woodcock <span className="text-amber-400">{"//"}</span> front-end
         developer
       </div>
-      <div>✌🏼🏳️‍🌈</div>
+      <div>🏳️‍🌈✌🏼</div>
     </footer>
   );
 }
