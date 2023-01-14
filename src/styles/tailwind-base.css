@@ -1,6 +1,10 @@
 @tailwind base;
 
 @layer base {
+  * {
+    @apply box-border m-0 p-0;
+  }
+
   html,
   body {
     @apply text-neutral-900;
@@ -19,7 +23,7 @@
   }
 
   p + p {
-    margin-top: 0;
+    @apply mt-0;
   }
 
   blockquote,
@@ -91,7 +95,7 @@
 
   b,
   strong {
-    font-weight: bold;
+    @apply font-bold;
   }
 
   pre {

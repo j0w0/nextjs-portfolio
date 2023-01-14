@@ -10,12 +10,11 @@ module.exports = {
       padding: "1rem",
     },
     fontFamily: {
-      sans: ["Arimo", "sans-serif"],
-      serif: ["Bungee", "serif"],
+      sans: ["var(--j0w0-font-primary)", "sans-serif"],
     },
     extend: {
       fontFamily: {
-        heading: ["Bungee", "serif"],
+        heading: ["var(--j0w0-font-secondary)", "serif"],
       },
     },
   },
