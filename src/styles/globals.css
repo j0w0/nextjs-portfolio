@@ -3,18 +3,13 @@
 @tailwind utilities;
 
 #__next {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+  @apply flex flex-col min-h-screen;
 }
 
 #__next > main {
-  flex: 1;
+  @apply flex-1;
 }
 
 img.alignleft {
-  width: unset;
-  float: left;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+  @apply float-left w-auto mr-4 mb-4;
 }
