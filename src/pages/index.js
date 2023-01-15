@@ -5,7 +5,7 @@ import PageHeading from "../components/PageHeading/PageHeading";
 export default function Home({ page }) {
   const LINKS = [
     {
-      href: "//www.github.com/j0w00",
+      href: "//www.github.com/j0w0",
       name: "Check out my Github",
     },
     {
@@ -70,7 +70,7 @@ export default function Home({ page }) {
 
           <p>
             Check out my{" "}
-            <a href="https://github.com/j0w00" target="_blank" rel="noreferrer">
+            <a href="https://github.com/j0w0" target="_blank" rel="noreferrer">
               Github
             </a>{" "}
             for code and project demos 👨🏻‍💻
