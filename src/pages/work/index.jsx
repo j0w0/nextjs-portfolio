@@ -74,5 +74,6 @@ export async function getStaticProps() {
     props: {
       projects: newPortfolioPosts,
     },
+    revalidate: 10,
   };
 }
