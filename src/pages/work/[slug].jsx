@@ -82,6 +82,6 @@ export async function getStaticPaths() {
 
   return {
     paths: portfolioPaths,
-    fallback: false,
+    fallback: "blocking",
   };
 }
