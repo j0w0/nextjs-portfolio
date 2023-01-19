@@ -68,6 +68,12 @@ export default function Post({ post }) {
 export async function getStaticProps({ params }) {
   const portfolioPost = await getPortfolioPost(params?.slug);
 
+  if (!portfolioPost) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: {
       post: portfolioPost,
