@@ -44,8 +44,6 @@ export async function getInteractivePortfolioPosts() {
                     databaseId
                     altText
                     mediaItemUrl
-                    srcSet
-                    mimeType
                     mediaDetails {
                       height
                       width
@@ -88,23 +86,19 @@ export async function getPortfolioPost(slug) {
           databaseId
           altText
           mediaItemUrl
-          srcSet
-          mimeType
           mediaDetails {
             height
             width
           }
         }
       }
-      attachedMedia {
+      featuredImages {
         edges {
           node {
             id
             databaseId
             altText
             mediaItemUrl
-            srcSet
-            mimeType
             mediaDetails {
               height
               width

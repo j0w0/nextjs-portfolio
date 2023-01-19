@@ -8,10 +8,10 @@ import Image from "next/image";
 
 export default function Post({ post }) {
   const {
-    attachedMedia,
     content,
     databaseId,
     featuredImage,
+    featuredImages,
     projectTags,
     slug,
     title,
@@ -38,7 +38,15 @@ export default function Post({ post }) {
 
           <hr className="my-10" />
 
-          {attachedMedia.edges.map((image) => {
+          <Image
+            key={featuredImage?.node?.databaseId}
+            src={featuredImage?.node?.mediaItemUrl}
+            height={featuredImage?.node?.mediaDetails?.height}
+            width={featuredImage?.node?.mediaDetails?.width}
+            alt={featuredImage?.node?.altText}
+          />
+
+          {featuredImages.edges.map((image) => {
             image = image.node;
             return (
               <Image
