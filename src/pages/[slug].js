@@ -1,3 +1,4 @@
+import ContactForm from "../components/ContactForm/ContactForm";
 import HTMLHead from "../components/HTMLHead/HTMLHead";
 import PageHeading from "../components/PageHeading/PageHeading";
 import { getPages, getPageBySlug } from "../lib/wp-graphql";
@@ -12,9 +13,7 @@ export default function Contact({ page }) {
         <div className="container pt-6 pb-10">
           <div dangerouslySetInnerHTML={{ __html: content }} />
 
-          {slug === "contact" && (
-            <p>Contact form coming soon! Use the LinkedIn link above 🔗</p>
-          )}
+          {slug === "contact" && <ContactForm />}
         </div>
       </section>
     </>
