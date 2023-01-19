@@ -6,7 +6,11 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "www.j0w0.com",
-        port: "",
+        pathname: "/wp-content/uploads/**",
+      },
+      {
+        protocol: "http",
+        hostname: "j0w0.local",
         pathname: "/wp-content/uploads/**",
       },
     ],
