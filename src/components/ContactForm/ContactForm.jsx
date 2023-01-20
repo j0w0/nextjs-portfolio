@@ -85,11 +85,11 @@ export default function ContactForm() {
 
   return (
     <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-      <h1 className="text-2xl font-bold">Send a Message</h1>
+      <h1 className="text-2xl font-bold">Send me a message!</h1>
 
       <div className="flex flex-col sm:flex-row sm:columns-2 gap-4">
         <div className="flex flex-col sm:basis-1/2">
-          <label htmlFor="fullName" className="text-gray-500">
+          <label htmlFor="fullName" className="text-neutral-900 text-sm">
             Full Name <span className="text-red-500">*</span>{" "}
             {errors?.fullName && (
               <span className="text-red-500">Field is required.</span>
@@ -100,21 +100,23 @@ export default function ContactForm() {
             value={fullName}
             onChange={handleNameChange}
             name="fullName"
+            id="fullName"
             className={`
               border
+              border-neutral-900
               rounded-md
               py-2
               pl-4
+              ring-amber-400
+              text-neutral-900
               focus:outline-none
-              focus:ring-1
-              ring-amber-500
-              text-gray-500
+              focus:ring-2
             `}
           />
         </div>
 
         <div className="flex flex-col sm:basis-1/2">
-          <label htmlFor="email" className="text-gray-500">
+          <label htmlFor="email" className="text-neutral-900 text-sm">
             Email <span className="text-red-500">*</span>{" "}
             {errors?.email && (
               <span className="text-red-500">Field is required.</span>
@@ -125,22 +127,24 @@ export default function ContactForm() {
             value={email}
             onChange={handleEmailChange}
             name="email"
+            id="email"
             className={`
               border
+              border-neutral-900
               rounded-md
               py-2
               pl-4
+              ring-amber-400
+              text-neutral-900
               focus:outline-none
-              focus:ring-1
-              ring-amber-500
-              text-gray-500
+              focus:ring-2
             `}
           />
         </div>
       </div>
 
       <div className="flex flex-col sm:basis-1/2">
-        <label htmlFor="message" className="text-gray-500">
+        <label htmlFor="message" className="text-neutral-900 text-sm">
           Message <span className="text-red-500">*</span>{" "}
           {errors?.message && (
             <span className="text-red-500">Field is required.</span>
@@ -148,17 +152,19 @@ export default function ContactForm() {
         </label>
         <textarea
           name="message"
+          id="message"
           value={message}
           onChange={handleMessageChange}
           className={`
             border
+            border-neutral-900
             rounded-md
             py-2
             pl-4
+            ring-amber-400
+            text-neutral-900
             focus:outline-none
-            focus:ring-1
-            ring-amber-500
-            text-gray-500
+            focus:ring-2
           `}
         ></textarea>
       </div>
@@ -166,12 +172,18 @@ export default function ContactForm() {
       <div className="flex flex-row items-center justify-start">
         <button
           className={`
+            border
+            border-neutral-900
+            rounded-md
             py-2
             px-4
-            rounded
-            bg-neutral-900
-            text-white
-            hover:text-amber-500
+            ring-amber-400
+            text-neutral-900
+            hover:bg-neutral-900
+            hover:text-white
+            focus:outline-none
+            focus:ring-2
+            transition-all
           `}
         >
           {buttonText}

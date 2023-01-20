@@ -1,0 +1,21 @@
+@import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+.carousel .slider-wrapper {
+  @apply relative shadow;
+}
+
+.carousel.carousel-slider {
+  @apply flex flex-col-reverse overflow-visible gap-3;
+}
+
+.carousel .control-dots {
+  @apply flex flex-row flex-wrap gap-3 justify-center relative;
+}
+
+.carousel .control-dots .dot {
+  @apply bg-neutral-500 shadow-none opacity-100 rounded-none px-0 py-0 m-0 w-6 h-2 hover:bg-neutral-700;
+}
+
+.carousel .control-dots .dot.selected {
+  @apply bg-amber-400;
+}

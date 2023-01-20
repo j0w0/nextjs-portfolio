@@ -1,10 +1,10 @@
+import Carousel from "../../components/Carousel/Carousel";
 import HTMLHead from "../../components/HTMLHead/HTMLHead";
 import PageHeading from "../../components/PageHeading/PageHeading";
 import {
   getInteractivePortfolioPosts,
   getPortfolioPost,
 } from "../../lib/wp-graphql";
-import Image from "next/image";
 
 export default function Post({ post }) {
   const {
@@ -18,46 +18,38 @@ export default function Post({ post }) {
     websiteUrl,
   } = post;
 
+  const displayImages = [featuredImage, ...featuredImages.edges];
+
   return (
     <>
       <HTMLHead title={title} />
       <PageHeading title={title} />
       <section className="flex flex-col">
         <div className="container pt-6 pb-10">
-          <div dangerouslySetInnerHTML={{ __html: content }} />
+          <div className="flex flex-col xl:flex-row-reverse xl:gap-10">
+            <div className="flex xl:basis-1/2 2xl:basis-2/3">
+              <Carousel images={displayImages} />
+            </div>
 
-          <ul className="list-none p-0 mb-4 flex items-center flex-wrap gap-2">
-            {projectTags.edges.map((tag) => {
-              return (
-                <li key={tag.node.id} className="px-2 py-1 bg-zinc-100">
-                  {tag.node.name}
-                </li>
-              );
-            })}
-          </ul>
-
-          <hr className="my-10" />
-
-          <Image
-            key={featuredImage?.node?.databaseId}
-            src={featuredImage?.node?.mediaItemUrl}
-            height={featuredImage?.node?.mediaDetails?.height}
-            width={featuredImage?.node?.mediaDetails?.width}
-            alt={featuredImage?.node?.altText}
-          />
-
-          {featuredImages.edges.map((image) => {
-            image = image.node;
-            return (
-              <Image
-                key={image.databaseId}
-                src={image.mediaItemUrl}
-                height={image.mediaDetails.height}
-                width={image.mediaDetails.width}
-                alt={image.altText}
+            <div className="flex flex-col xl:basis-1/2 2xl:basis-1/3">
+              <div
+                className="cms-content"
+                dangerouslySetInnerHTML={{ __html: content }}
               />
-            );
-          })}
+              <ul className="list-none p-0 mb-4 flex items-center flex-wrap gap-2">
+                {projectTags.edges.map((tag) => {
+                  return (
+                    <li
+                      key={tag.node.id}
+                      className="px-2 py-1 bg-neutral-100 text-xs"
+                    >
+                      {tag.node.name}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </>
