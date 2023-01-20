@@ -51,7 +51,7 @@ export default function Home({ page }) {
         })}
       />
 
-      <section className="flex flex-col">
+      <section className="flex flex-col flex-1 justify-center">
         <div className="container py-10">
           <p>
             I am a <strong>Front-End Developer</strong> experienced in building
