@@ -23,14 +23,14 @@ async function fetchAPI(query = "", { variables } = {}) {
 }
 
 // get all portfolio posts in "Interactive" category
-export async function getInteractivePortfolioPosts() {
+export async function getInteractivePortfolioPosts(count = 20) {
   const results = await fetchAPI(`{
     projectCategories(where: {name: "Interactive"}) {
       edges {
         node {
           id
           name
-          projects(first: 20) {
+          projects(first: ${count}) {
             edges {
               node {
                 id

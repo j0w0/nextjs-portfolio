@@ -1,9 +1,8 @@
-import Link from "next/link";
-import Image from "next/image";
 import HTMLHead from "../../components/HTMLHead/HTMLHead";
 import { getInteractivePortfolioPosts } from "../../lib/wp-graphql";
 import { getPlaiceholder } from "plaiceholder";
 import PageHeading from "../../components/PageHeading/PageHeading";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
 export default function Portfolio({ projects }) {
   return (
@@ -25,41 +24,9 @@ export default function Portfolio({ projects }) {
             xl:gap-8
             "
           >
-            {projects.map((project) => {
-              const { mediaItemUrl, altText, mediaDetails, blurDataURL } =
-                project.featuredImage;
-
-              const projectTags = project.projectTags;
-
-              const tags = projectTags.edges.map((edge) => {
-                return edge.node.name;
-              });
-
-              return (
-                <div key={project.databaseId}>
-                  <Link
-                    href={`/work/${encodeURIComponent(project.slug)}`}
-                    className="no-underline"
-                  >
-                    <Image
-                      src={mediaItemUrl}
-                      alt={altText}
-                      width={mediaDetails.width}
-                      height={mediaDetails.height}
-                      placeholder="blur"
-                      blurDataURL={blurDataURL}
-                      className="mb-6"
-                    />
-                    <h3 className="hover:bg-amber-400 inline leading-3 font-sans font-bold">
-                      {project.title}
-                    </h3>
-                  </Link>
-                  <p className="text-neutral-600 text-xs italic mt-3">
-                    {tags.join(", ")}
-                  </p>
-                </div>
-              );
-            })}
+            {projects.map((project) => (
+              <ProjectCard key={project.databaseId} project={project} />
+            ))}
           </div>
         </div>
       </section>
