@@ -22,12 +22,12 @@ export default function Sidebar() {
               href={link.href}
               className="
                 no-underline
-                border-none
+                border
+                border-neutral-900
                 rounded
                 py-2
                 px-4
                 ring-amber-400
-                bg-neutral-200
                 text-neutral-900
                 hover:bg-amber-400
                 focus:outline-none
@@ -37,7 +37,7 @@ export default function Sidebar() {
               target="_blank"
               rel="noreferrer"
             >
-              {link.name}
+              {link.name} &raquo;
             </a>
           );
         })}

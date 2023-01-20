@@ -179,8 +179,7 @@ export default function ContactForm() {
             px-4
             ring-amber-400
             text-neutral-900
-            hover:bg-neutral-900
-            hover:text-white
+            hover:bg-amber-400
             focus:outline-none
             focus:ring-2
             transition-all

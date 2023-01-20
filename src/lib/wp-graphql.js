@@ -69,6 +69,45 @@ export async function getInteractivePortfolioPosts(count = 20) {
   return posts.map((post) => post.node);
 }
 
+// get random portfolio posts
+export async function getRandomProjects(count = 4) {
+  const results = await fetchAPI(`{
+    projectsRandom(first: ${count}) {
+      edges {
+        node {
+          id
+          databaseId
+          slug
+          title
+          websiteUrl
+          featuredImage {
+            node {
+              id
+              databaseId
+              altText
+              mediaItemUrl
+              mediaDetails {
+                height
+                width
+              }
+            }
+          }
+          projectTags {
+            edges {
+              node {
+                id
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+  }`);
+  const posts = results?.projectsRandom?.edges;
+  return posts.map((post) => post.node);
+}
+
 // get single portfolio post
 export async function getPortfolioPost(slug) {
   const results = await fetchAPI(
