@@ -41,6 +41,7 @@ export default function Home({ page }) {
                   border-amber-400
                   hover:bg-amber-400
                   hover:text-black
+                  transition-all
                 "
               target="_blank"
               rel="noreferrer"

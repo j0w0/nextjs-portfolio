@@ -12,14 +12,19 @@ export default function Contact({ page }) {
       <PageHeading title={title} />
       <section className="flex flex-col">
         <div className="container py-10">
-          <div className="flex flex-col lg:flex-row lg:gap-20">
-            <div className="lg:basis-3/4">
+          <div
+            className="
+            grid
+            lg:grid-cols-4
+            lg:gap-6
+            xl:gap-8
+            "
+          >
+            <div className="lg:col-span-3">
               <div dangerouslySetInnerHTML={{ __html: content }} />
               {slug === "contact" && <ContactForm />}
             </div>
-            <div className="lg:basis-1/4">
-              <Sidebar />
-            </div>
+            <Sidebar />
           </div>
         </div>
       </section>
