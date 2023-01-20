@@ -8,6 +8,7 @@ export default function Document() {
           name="description"
           content="Josh Woodcock, Front-End Developer & Software Engineer"
         />
+        <meta property="og:image" content="/j0w0-meta-img.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
