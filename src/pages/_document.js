@@ -1,7 +1,8 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
-  const description = "Josh Woodcock, Front-End Developer & Software Engineer";
+  const description =
+    "Front-End Developer and Software Engineer experienced in building high-quality, manageable, and scalable websites and web applications.";
 
   return (
     <Html lang="en">
