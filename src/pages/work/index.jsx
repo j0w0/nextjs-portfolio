@@ -28,9 +28,19 @@ export default function Portfolio({ projects }) {
             {projects.map((project) => {
               const { mediaItemUrl, altText, mediaDetails, blurDataURL } =
                 project.featuredImage;
+
+              const projectTags = project.projectTags;
+
+              const tags = projectTags.edges.map((edge) => {
+                return edge.node.name;
+              });
+
               return (
                 <div key={project.databaseId}>
-                  <Link href={`/work/${encodeURIComponent(project.slug)}`}>
+                  <Link
+                    href={`/work/${encodeURIComponent(project.slug)}`}
+                    className="no-underline"
+                  >
                     <Image
                       src={mediaItemUrl}
                       alt={altText}
@@ -38,9 +48,15 @@ export default function Portfolio({ projects }) {
                       height={mediaDetails.height}
                       placeholder="blur"
                       blurDataURL={blurDataURL}
+                      className="mb-6"
                     />
-                    {project.title}
+                    <h3 className="hover:bg-amber-400 inline leading-3 font-sans font-bold">
+                      {project.title}
+                    </h3>
                   </Link>
+                  <p className="text-neutral-600 text-xs italic mt-3">
+                    {tags.join(", ")}
+                  </p>
                 </div>
               );
             })}
