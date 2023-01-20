@@ -54,18 +54,18 @@ export default function Home({ page }) {
       <section className="flex flex-col">
         <div className="container py-10">
           <p>
-            I am a <strong>Front-End Developer / Software Engineer</strong>{" "}
-            experienced in building reliable, manageable, and scalable websites
-            and web applications. I develop quality products by utilizing
-            appropriate technologies and applying best practices for data
-            organization and code optimization.
+            I am a <strong>Front-End Developer</strong> experienced in building
+            reliable, manageable, and scalable websites and web applications by
+            utilizing appropriate technologies and applying best practices and
+            industry standards.
           </p>
 
           <p>
             <strong>Skills/Technologies:</strong> React, JavaScript, HTML, CSS,
-            SCSS and SASS, TypeScript, Vite, Next.js, Node, Express, Google
-            Firebase, MongoDB, PostgreSQL, MySQL, Bootstrap, jQuery, PHP, Git,
-            creating and consuming RESTful APIs, Wordpress CMS, WooCommerce.
+            SCSS, TypeScript, Vite, Next.js, Node, Express, Google Firebase,
+            MongoDB, GraphQL, PostgreSQL, MySQL, Bootstrap, Tailwind, jQuery,
+            PHP, Git, Jira, creating and consuming RESTful APIs, Wordpress &
+            Headless CMS, WooCommerce.
           </p>
 
           <p>
@@ -75,32 +75,6 @@ export default function Home({ page }) {
             </a>{" "}
             for code and project demos 👨🏻‍💻
           </p>
-
-          <hr />
-
-          <h2>Next.js</h2>
-
-          <p>
-            this is a wip. im using next.js to build this site as a headless{" "}
-            <Link href="/work">portfolio</Link>. im using{" "}
-            <a href="https://www.j0w0.com/" target="_blank" rel="noreferrer">
-              my current wordpress site
-            </a>{" "}
-            as the backend data source.
-          </p>
-
-          <ul>
-            <li>230104 - started with create-next-app</li>
-            <li>230106 - added basic page structure and google fonts</li>
-            <li>230108 - added graphql queries to get wordpress data</li>
-            <li>230109 - set up next/image for featured images</li>
-            <li>
-              230110 - added tailwindcss, not sure if i like it over bootstrap
-            </li>
-            <li>230111 - added tailwind classes for structure and styling</li>
-            <li>230112 - added project tags</li>
-            <li>230113 - added project images, tailwind styles, mobile menu</li>
-          </ul>
         </div>
       </section>
     </>
