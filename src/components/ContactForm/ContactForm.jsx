@@ -104,7 +104,7 @@ export default function ContactForm() {
             className={`
               border
               border-neutral-900
-              rounded-md
+              rounded
               py-2
               pl-4
               ring-amber-400
@@ -131,7 +131,7 @@ export default function ContactForm() {
             className={`
               border
               border-neutral-900
-              rounded-md
+              rounded
               py-2
               pl-4
               ring-amber-400
@@ -158,7 +158,7 @@ export default function ContactForm() {
           className={`
             border
             border-neutral-900
-            rounded-md
+            rounded
             py-2
             pl-4
             ring-amber-400
@@ -174,7 +174,7 @@ export default function ContactForm() {
           className={`
             border
             border-neutral-900
-            rounded-md
+            rounded
             py-2
             px-4
             ring-amber-400

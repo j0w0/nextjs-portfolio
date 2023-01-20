@@ -14,7 +14,3 @@
 img.alignleft {
   @apply float-left w-auto mr-4 mb-4;
 }
-
-.cms-content + p {
-  @apply mt-0;
-}

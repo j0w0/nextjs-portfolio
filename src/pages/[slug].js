@@ -1,6 +1,7 @@
 import ContactForm from "../components/ContactForm/ContactForm";
 import HTMLHead from "../components/HTMLHead/HTMLHead";
 import PageHeading from "../components/PageHeading/PageHeading";
+import Sidebar from "../components/Sidebar/Sidebar";
 import { getPages, getPageBySlug } from "../lib/wp-graphql";
 
 export default function Contact({ page }) {
@@ -10,10 +11,16 @@ export default function Contact({ page }) {
       <HTMLHead title={title} />
       <PageHeading title={title} />
       <section className="flex flex-col">
-        <div className="container pt-6 pb-10">
-          <div dangerouslySetInnerHTML={{ __html: content }} />
-
-          {slug === "contact" && <ContactForm />}
+        <div className="container py-10">
+          <div className="flex flex-col lg:flex-row lg:gap-20">
+            <div className="lg:basis-3/4">
+              <div dangerouslySetInnerHTML={{ __html: content }} />
+              {slug === "contact" && <ContactForm />}
+            </div>
+            <div className="lg:basis-1/4">
+              <Sidebar />
+            </div>
+          </div>
         </div>
       </section>
     </>

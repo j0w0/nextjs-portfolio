@@ -52,7 +52,7 @@ export default function Home({ page }) {
       />
 
       <section className="flex flex-col">
-        <div className="container pt-6 pb-10">
+        <div className="container py-10">
           <p>
             I am a <strong>Front-End Developer / Software Engineer</strong>{" "}
             experienced in building reliable, manageable, and scalable websites

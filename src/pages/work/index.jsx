@@ -11,7 +11,7 @@ export default function Portfolio({ projects }) {
       <HTMLHead title="Web Development" />
       <PageHeading title="Web Development" />
       <section className="flex flex-col">
-        <div className="container pt-12 pb-10">
+        <div className="container py-10">
           <div
             className="
             grid

@@ -25,17 +25,14 @@ export default function Post({ post }) {
       <HTMLHead title={title} />
       <PageHeading title={title} />
       <section className="flex flex-col">
-        <div className="container pt-6 pb-10">
+        <div className="container py-10">
           <div className="flex flex-col xl:flex-row-reverse xl:gap-10">
             <div className="flex xl:basis-1/2 2xl:basis-2/3">
               <Carousel images={displayImages} />
             </div>
 
             <div className="flex flex-col xl:basis-1/2 2xl:basis-1/3">
-              <div
-                className="cms-content"
-                dangerouslySetInnerHTML={{ __html: content }}
-              />
+              <div dangerouslySetInnerHTML={{ __html: content }} />
               <ul className="list-none p-0 mb-4 flex items-center flex-wrap gap-2">
                 {projectTags.edges.map((tag) => {
                   return (
