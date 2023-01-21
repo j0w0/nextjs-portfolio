@@ -87,6 +87,7 @@ export default function Navigation() {
             flex-col
             space-y-5
             duration-300
+            shadow
             drop-shadow
           `}
           >
