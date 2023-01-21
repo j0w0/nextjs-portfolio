@@ -67,6 +67,20 @@ export default function Home({ page, projects }) {
             "
           >
             <div className="lg:col-span-3">
+              <p>
+                I built this site as a Headless CMS using Next.js with
+                TailwindCSS for the front end and, via GraphQL, my{" "}
+                <a
+                  href="https://wordpress.j0w0.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  existing Wordpress website
+                </a>{" "}
+                as the data source. It is a hybrid web app that uses server-side
+                rendering and static generation, so enjoy the speed! ⚡️
+              </p>
+
               <h3 className="text-3xl mb-6">Hello, world!</h3>
 
               <div className="mb-10">
