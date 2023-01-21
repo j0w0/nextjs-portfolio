@@ -9,6 +9,11 @@ const nextConfig = {
         pathname: "/wp-content/uploads/**",
       },
       {
+        protocol: "https",
+        hostname: "wordpress.j0w0.com",
+        pathname: "/wp-content/uploads/**",
+      },
+      {
         protocol: "http",
         hostname: "j0w0.local",
         pathname: "/wp-content/uploads/**",
