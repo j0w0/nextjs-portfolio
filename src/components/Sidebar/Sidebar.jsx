@@ -12,7 +12,7 @@ export default function Sidebar() {
 
   return (
     <aside className="">
-      <h4>Connect! 🚀</h4>
+      <h4 className="text-xl">Connect! 📬</h4>
 
       <div className="flex flex-wrap gap-2">
         {LINKS.map((link) => {
