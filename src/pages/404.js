@@ -4,10 +4,9 @@ import PageHeading from "../components/PageHeading/PageHeading";
 import Sidebar from "../components/Sidebar/Sidebar";
 
 export default function Custom404() {
-  const title = "404!";
   return (
     <>
-      <HTMLHead title={title} />
+      <HTMLHead title="404" />
       <PageHeading title="I- uh..." />
       <section className="flex flex-col">
         <div className="container py-10">
