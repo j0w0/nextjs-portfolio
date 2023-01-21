@@ -5,11 +5,6 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "www.j0w0.com",
-        pathname: "/wp-content/uploads/**",
-      },
-      {
-        protocol: "https",
         hostname: "wordpress.j0w0.com",
         pathname: "/wp-content/uploads/**",
       },
