@@ -17,6 +17,7 @@ export default function Header() {
         top-0
         shadow
         drop-shadow
+        z-10
       `}
     >
       <Link
