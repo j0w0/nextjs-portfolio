@@ -27,11 +27,11 @@ export default function Post({ post }) {
       <section className="flex flex-col">
         <div className="container py-10 lg:py-20">
           <div className="grid gap-2 xl:grid-cols-12 xl:gap-8">
-            <div className="xl:col-span-6 2xl:col-span-7">
+            <div className="xl:col-span-6 2xl:col-start-1 2xl:col-end-7">
               <Carousel images={displayImages} />
             </div>
 
-            <div className="xl:col-span-6 2xl:col-span-5">
+            <div className="xl:col-span-6">
               <div dangerouslySetInnerHTML={{ __html: content }} />
               <ul className="list-none p-0 mb-4 flex items-center flex-wrap gap-2">
                 {projectTags.edges.map((tag) => {
