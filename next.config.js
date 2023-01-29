@@ -10,7 +10,7 @@ const nextConfig = {
       },
       {
         protocol: "http",
-        hostname: "j0w0.local",
+        hostname: "j0w0-wordpress.local",
         pathname: "/wp-content/uploads/**",
       },
     ],
