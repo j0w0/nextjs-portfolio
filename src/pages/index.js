@@ -2,69 +2,48 @@ import Link from "next/link";
 import { getRandomProjects } from "../lib/wp-graphql";
 import { getPlaiceholder } from "plaiceholder";
 import HTMLHead from "../components/HTMLHead/HTMLHead";
-import PageHeading from "../components/PageHeading/PageHeading";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import Sidebar from "../components/Sidebar/Sidebar";
+import ButtonLink from "../components/ButtonLink/ButtonLink";
+import UFOScene from "../components/UFOScene/UFOScene";
+import atfStyles from "../styles/above-the-fold.module.css";
 
 export default function Home({ page, projects }) {
-  const LINKS = [
-    {
-      href: "//www.github.com/j0w0",
-      name: "Check out my Github",
-    },
-    {
-      href: "http://resume.j0w0.com",
-      name: "View my Resume",
-    },
-  ];
-
   return (
     <>
       <HTMLHead title="Josh Woodcock // Front-End Developer" home={true} />
 
-      <PageHeading
-        title={
-          <span
-            dangerouslySetInnerHTML={{
-              __html: `${page.greeting},<br /> I’m Josh`,
-            }}
-          />
-        }
-        subtitle="Front-End Developer"
-        buttons={LINKS.map((link) => {
-          return (
-            <a
-              key={link.name}
-              href={link.href}
-              className="
-                no-underline
-                py-2
-                px-4
-                rounded
-                border
-                border-amber-400
-                hover:bg-amber-400
-                hover:text-black
-                transition-all
-              "
-              target="_blank"
-              rel="noreferrer"
-            >
-              {link.name}
-            </a>
-          );
-        })}
-      />
+      <section className={atfStyles["above-the-fold"]}>
+        <div className={atfStyles.atf__container}>
+          <div className={atfStyles.atf__greeting}>
+            <h1 className="text-amber-400">{page.greeting}, I’m Josh</h1>
+            <h2 className="mt-0">Front-End Developer</h2>
+          </div>
+
+          <div className={atfStyles.atf__ufo}>
+            <UFOScene />
+          </div>
+
+          <div className={atfStyles.atf__intro}>
+            <p className="mb-6">
+              I am a Front-End Developer experienced in building websites and
+              web app user interfaces. I enjoy engineering solutions to improve
+              efficiency and automate processes.
+            </p>
+            <ButtonLink href="/work" text="View My Work" internal={true} />
+          </div>
+        </div>
+      </section>
 
       <section>
         <div className="container py-10">
           <div
-            className="
+            className={`
               grid
               lg:grid-cols-4
               lg:gap-6
               xl:gap-8
-            "
+            `}
           >
             <div className="lg:col-span-3">
               <p>
@@ -116,7 +95,7 @@ export default function Home({ page, projects }) {
               <h3 className="text-3xl mb-6">Web Projects</h3>
 
               <div
-                className="
+                className={`
                   grid
                   grid-cols-1
                   gap-2
@@ -124,7 +103,7 @@ export default function Home({ page, projects }) {
                   md:gap-4
                   xl:grid-cols-4
                   xl:gap-8
-                "
+                `}
               >
                 {projects.map((project) => (
                   <ProjectCard key={project.databaseId} project={project} />
@@ -133,7 +112,7 @@ export default function Home({ page, projects }) {
 
               <Link
                 href="/work"
-                className="
+                className={`
                   no-underline
                   py-2
                   px-4
@@ -145,7 +124,7 @@ export default function Home({ page, projects }) {
                   hover:text-black
                   transition-all
                   inline-block
-                "
+                `}
               >
                 View all web projects &raquo;
               </Link>

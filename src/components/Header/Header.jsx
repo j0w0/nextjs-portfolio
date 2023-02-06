@@ -8,16 +8,18 @@ export default function Header() {
     <header
       className={`
       bg-amber-400
+      text-neutral-900
         px-4
         py-1
         flex
         justify-between
         items-center
-        sticky
-        top-0
+        fixed
+        w-full
         shadow
         drop-shadow
         z-10
+        site-header
       `}
     >
       <Link
