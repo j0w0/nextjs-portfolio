@@ -1,9 +1,8 @@
-import Link from "next/link";
 import { getRandomProjects } from "../lib/wp-graphql";
 import { getPlaiceholder } from "plaiceholder";
 import HTMLHead from "../components/HTMLHead/HTMLHead";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
-import Sidebar from "../components/Sidebar/Sidebar";
+import ContactForm from "../components/ContactForm/ContactForm";
 import ButtonLink from "../components/ButtonLink/ButtonLink";
 import UFOScene from "../components/UFOScene/UFOScene";
 import atfStyles from "../styles/above-the-fold.module.css";
@@ -30,107 +29,56 @@ export default function Home({ page, projects }) {
               web app user interfaces. I enjoy engineering solutions to improve
               efficiency and automate processes.
             </p>
-            <ButtonLink href="/work" text="View My Work" internal={true} />
+            <div className="flex flex-col gap-4 items-center md:flex-row">
+              <ButtonLink href="/work" text="View My Work" internal={true} />
+              <ButtonLink
+                href="//resume.j0w0.com"
+                text="View My Resume"
+                internal={false}
+              />
+            </div>
           </div>
         </div>
       </section>
 
       <section>
-        <div className="container py-10">
+        <div className="container pb-10">
+          <h3 className="text-3xl mb-8 text-amber-400">Web Development Work</h3>
           <div
             className={`
               grid
-              lg:grid-cols-4
-              lg:gap-6
+              grid-cols-1
+              gap-2
+              md:grid-cols-2
+              md:gap-4
+              xl:grid-cols-4
               xl:gap-8
+              mb-8
             `}
           >
-            <div className="lg:col-span-3">
-              <p>
-                I built this site as a Headless CMS using Next.js with
-                TailwindCSS for the front end and, via GraphQL, my{" "}
-                <a
-                  href="https://wordpress.j0w0.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  existing Wordpress website
-                </a>{" "}
-                as the data source. It is a hybrid web app that uses server-side
-                rendering and static generation, so enjoy the speed! ⚡️
-              </p>
-
-              <h3 className="text-3xl mb-6">Hello, world!</h3>
-
-              <div className="mb-10">
-                <p>
-                  I am a <strong>Front-End Developer</strong> experienced in
-                  building reliable, manageable, and scalable websites and web
-                  applications by utilizing appropriate technologies and
-                  applying best practices and industry standards.
-                </p>
-
-                <p>
-                  <strong>Skills/Technologies:</strong> React, JavaScript, HTML,
-                  CSS, SCSS, TypeScript, Vite, Next.js, Node, Express, Google
-                  Firebase, MongoDB, GraphQL, PostgreSQL, MySQL, Bootstrap,
-                  Tailwind, jQuery, PHP, Git, Jira, creating and consuming
-                  RESTful APIs, Wordpress & Headless CMS, WooCommerce.
-                </p>
-
-                <p>
-                  Check out my{" "}
-                  <a
-                    href="https://github.com/j0w0"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Github
-                  </a>{" "}
-                  for code and project demos or{" "}
-                  <Link href="/work">view my work</Link> 👨🏻‍💻
-                </p>
-              </div>
-
-              <h3 className="text-3xl mb-6">Web Projects</h3>
-
-              <div
-                className={`
-                  grid
-                  grid-cols-1
-                  gap-2
-                  md:grid-cols-2
-                  md:gap-4
-                  xl:grid-cols-4
-                  xl:gap-8
-                `}
-              >
-                {projects.map((project) => (
-                  <ProjectCard key={project.databaseId} project={project} />
-                ))}
-              </div>
-
-              <Link
-                href="/work"
-                className={`
-                  no-underline
-                  py-2
-                  px-4
-                  my-4
-                  rounded
-                  border
-                  border-neutral-900
-                  hover:bg-amber-400
-                  hover:text-black
-                  transition-all
-                  inline-block
-                `}
-              >
-                View all web projects &raquo;
-              </Link>
-            </div>
-            <Sidebar />
+            {projects.map((project) => (
+              <ProjectCard key={project.databaseId} project={project} />
+            ))}
           </div>
+          <ButtonLink href="/work" text="View More Work" internal={true} />
+        </div>
+      </section>
+
+      <section>
+        <div className="container pb-10">
+          <h3 className="text-3xl mb-8 text-amber-400">E.T. Phone Home</h3>
+          <p>
+            Ready to make something outta this world? Contact me on{" "}
+            <a
+              href="https://www.linkedin.com/in/j0w0/"
+              targe="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>{" "}
+            or use the form below to send me a message.
+          </p>
+          <ContactForm />
         </div>
       </section>
     </>
@@ -138,7 +86,7 @@ export default function Home({ page, projects }) {
 }
 
 export async function getStaticProps() {
-  const portfolioPosts = await getRandomProjects(4);
+  const portfolioPosts = await getRandomProjects(8);
 
   const newPortfolioPosts = await Promise.all(
     portfolioPosts.map(async (post) => {

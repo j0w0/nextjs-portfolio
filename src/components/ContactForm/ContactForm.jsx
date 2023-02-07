@@ -85,8 +85,6 @@ export default function ContactForm() {
 
   return (
     <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-      <h1 className="text-2xl font-bold">Send me a message!</h1>
-
       <div className="flex flex-col sm:flex-row sm:columns-2 gap-4">
         <div className="flex flex-col sm:basis-1/2">
           <label htmlFor="fullName" className="text-neutral-900 text-sm">

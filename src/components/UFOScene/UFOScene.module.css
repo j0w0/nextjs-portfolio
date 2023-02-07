@@ -1,3 +1,22 @@
+.ufo-scene-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .ufo-scene-wrapper {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ufo-scene-wrapper {
+    width: 50%;
+  }
+}
+
 .ufo-scene {
   position: relative;
   z-index: -1;
@@ -13,6 +32,35 @@
   height: 40%;
 }
 
+.cls-1 {
+  fill: #fabe24;
+}
+.cls-2,
+.cls-3 {
+  fill: #fff;
+}
+.cls-4 {
+  fill: #ac7700;
+}
+.cls-5 {
+  fill: #409234;
+}
+.cls-6 {
+  fill: #1a5606;
+}
+.cls-7 {
+  fill: #5f9a4e;
+}
+.cls-8 {
+  fill: #4f7244;
+}
+.cls-9 {
+  opacity: 0.25;
+}
+.cls-3 {
+  opacity: 0.28;
+}
+
 @media (min-width: 768px) {
   .ufo__svg {
     height: unset;
@@ -25,7 +73,7 @@
 
 .ufo__cow {
   position: absolute;
-  bottom: 15%;
+  bottom: 25%;
   height: 10%;
   width: auto;
 }

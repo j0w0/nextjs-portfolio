@@ -5,17 +5,16 @@ export default function ProjectCard({ project }) {
   const { mediaItemUrl, altText, mediaDetails, blurDataURL } =
     project.featuredImage;
 
-  const projectTags = project.projectTags;
-
-  const tags = projectTags.edges.map((edge) => {
-    return edge.node.name;
-  });
-
   return (
     <div>
       <Link
         href={`/work/${encodeURIComponent(project.slug)}`}
-        className="no-underline"
+        className={`
+          no-underline
+          hover:underline
+          hover:text-amber-400
+          hover:bg-transparent
+        `}
       >
         <Image
           src={mediaItemUrl}
@@ -26,11 +25,14 @@ export default function ProjectCard({ project }) {
           blurDataURL={blurDataURL}
           className="mb-6"
         />
-        <h3 className="hover:bg-amber-400 inline leading-3 font-sans font-bold">
+        <h3 className="inline leading-3 font-sans font-bold">
           {project.title}
         </h3>
       </Link>
-      <p className="text-neutral-600 text-xs italic mt-3">{tags.join(", ")}</p>
+      <p className="mt-3 text-sm text-neutral-300">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a
+        dui non metus auctor sodales at nec quam.
+      </p>
     </div>
   );
 }

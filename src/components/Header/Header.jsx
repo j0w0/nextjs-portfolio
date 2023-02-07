@@ -31,7 +31,7 @@ export default function Header() {
           className="w-10 h-10"
           alt="Josh Woodcock, Front-End Developer"
         />
-        <h1 className="text-lg leading-none tracking-tight">
+        <h1 className="text-lg leading-none tracking-tight text-neutral-900">
           Josh Woodcock
           <br />
           Front-End Developer
