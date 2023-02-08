@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../Button/Button";
 
 export default function ContactForm() {
   const [fullName, setFullName] = useState("");
@@ -6,7 +7,7 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
 
   const [errors, setErrors] = useState({});
-  const [buttonText, setButtonText] = useState("Send");
+  const [buttonText, setButtonText] = useState("Send Message");
 
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
@@ -80,14 +81,18 @@ export default function ContactForm() {
       }, 5000);
     }
 
-    setButtonText("Send");
+    setButtonText("Send Message");
   };
 
   return (
-    <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+    <form
+      className="flex flex-col gap-4"
+      onSubmit={handleSubmit}
+      autoComplete="off"
+    >
       <div className="flex flex-col sm:flex-row sm:columns-2 gap-4">
         <div className="flex flex-col sm:basis-1/2">
-          <label htmlFor="fullName" className="text-neutral-900 text-sm">
+          <label htmlFor="fullName" className="text-sm mb-2">
             Full Name <span className="text-red-500">*</span>{" "}
             {errors?.fullName && (
               <span className="text-red-500">Field is required.</span>
@@ -106,15 +111,16 @@ export default function ContactForm() {
               py-2
               pl-4
               ring-amber-400
-              text-neutral-900
+              text-[#1a003b]
+              bg-white/50
               focus:outline-none
-              focus:ring-2
+              focus:ring-1
             `}
           />
         </div>
 
         <div className="flex flex-col sm:basis-1/2">
-          <label htmlFor="email" className="text-neutral-900 text-sm">
+          <label htmlFor="email" className="text-sm mb-2">
             Email <span className="text-red-500">*</span>{" "}
             {errors?.email && (
               <span className="text-red-500">Field is required.</span>
@@ -133,16 +139,17 @@ export default function ContactForm() {
               py-2
               pl-4
               ring-amber-400
-              text-neutral-900
+              text-[#1a003b]
+              bg-white/50
               focus:outline-none
-              focus:ring-2
+              focus:ring-1
             `}
           />
         </div>
       </div>
 
       <div className="flex flex-col sm:basis-1/2">
-        <label htmlFor="message" className="text-neutral-900 text-sm">
+        <label htmlFor="message" className="text-sm mb-2">
           Message <span className="text-red-500">*</span>{" "}
           {errors?.message && (
             <span className="text-red-500">Field is required.</span>
@@ -160,31 +167,16 @@ export default function ContactForm() {
             py-2
             pl-4
             ring-amber-400
-            text-neutral-900
+           text-[#1a003b]
+            bg-white/50
             focus:outline-none
-            focus:ring-2
+            focus:ring-1
           `}
         ></textarea>
       </div>
 
       <div className="flex flex-row items-center justify-start">
-        <button
-          className={`
-            border
-            border-neutral-900
-            rounded
-            py-2
-            px-4
-            ring-amber-400
-            text-neutral-900
-            hover:bg-amber-400
-            focus:outline-none
-            focus:ring-2
-            transition-all
-          `}
-        >
-          {buttonText}
-        </button>
+        <Button text={buttonText} />
       </div>
 
       {showSuccessMessage && (

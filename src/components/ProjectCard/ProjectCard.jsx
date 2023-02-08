@@ -25,7 +25,7 @@ export default function ProjectCard({ project }) {
           blurDataURL={blurDataURL}
           className="mb-6"
         />
-        <h3 className="inline leading-3 font-sans font-bold">
+        <h3 className="inline leading-3 font-bold tracking-wide">
           {project.title}
         </h3>
       </Link>

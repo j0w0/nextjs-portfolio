@@ -2,17 +2,13 @@
   position: relative;
   display: flex;
   justify-content: center;
-}
 
-@media (min-width: 1024px) {
-  .ufo-scene-wrapper {
+  @media (min-width: 1024px) {
     width: 75%;
     margin: 0 auto;
   }
-}
 
-@media (min-width: 1280px) {
-  .ufo-scene-wrapper {
+  @media (min-width: 1280px) {
     width: 50%;
   }
 }
@@ -30,6 +26,10 @@
   position: relative;
   z-index: 1;
   height: 40%;
+
+  @media (min-width: 768px) {
+    height: unset;
+  }
 }
 
 .cls-1 {
@@ -59,12 +59,6 @@
 }
 .cls-3 {
   opacity: 0.28;
-}
-
-@media (min-width: 768px) {
-  .ufo__svg {
-    height: unset;
-  }
 }
 
 .ufo__beam {
