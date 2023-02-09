@@ -6,16 +6,12 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const PATHS = [
   {
-    href: "/about",
-    name: "about",
-  },
-  {
     href: "/work",
-    name: "work",
+    name: "Web Development Work",
   },
   {
-    href: "/contact",
-    name: "contact",
+    href: "/about",
+    name: "About Josh",
   },
 ];
 
@@ -24,11 +20,11 @@ const Menu = ({ mobile = false, handleMobileMenuVisibility = null }) => {
   let linkBase = `no-underline hover:bg-inherit`;
 
   let menuClasses = `${menuBase} items-center flex-wrap`;
-  let linkClasses = `${linkBase} p-2 hover:underline`;
+  let linkClasses = `${linkBase} p-2 hover:underline text-neutral-900`;
 
   if (mobile) {
     menuClasses = `${menuBase} flex-col`;
-    linkClasses = `${linkBase} py-2 block hover:text-amber-400 text-center`;
+    linkClasses = `${linkBase} py-2 block text-white hover:text-amber-400 text-center`;
   }
 
   return (
@@ -74,22 +70,22 @@ export default function Navigation() {
           />
           <div
             className={`
-            fixed
-            top-0
-            ${mobileMenuVisible ? `right-0` : `right-[-250px]`}
-            w-[240px]
-            h-screen
-            z-50
-          bg-neutral-900
-          text-white
-            p-5
-            flex
-            flex-col
-            space-y-5
-            duration-300
-            shadow
-            drop-shadow
-          `}
+              fixed
+              top-0
+              ${mobileMenuVisible ? `right-0` : `right-[-250px]`}
+              w-[240px]
+              h-screen
+              z-50
+            bg-neutral-900
+            text-white
+              p-5
+              flex
+              flex-col
+              space-y-5
+              duration-300
+              shadow
+              drop-shadow
+            `}
           >
             <div className="flex flex-row items-center justify-between border-b border-amber-400 pb-4">
               <Link

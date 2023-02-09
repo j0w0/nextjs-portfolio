@@ -1,6 +1,7 @@
 import Carousel from "../../components/Carousel/Carousel";
 import HTMLHead from "../../components/HTMLHead/HTMLHead";
 import PageHeading from "../../components/PageHeading/PageHeading";
+import Sidebar from "../../components/Sidebar/Sidebar";
 import {
   getInteractivePortfolioPosts,
   getPortfolioPost,
@@ -19,32 +20,41 @@ export default function Post({ post }) {
   } = post;
 
   const displayImages = [featuredImage, ...featuredImages.edges];
+  const contentLinkFix = content.replace(
+    "j0w0.com/portfolio/",
+    "j0w0.com/work/"
+  );
 
   return (
     <>
       <HTMLHead title={title} />
       <PageHeading title={title} />
       <section className="flex flex-col">
-        <div className="container py-10 lg:py-20">
-          <div className="grid gap-2 xl:grid-cols-12 xl:gap-8">
-            <div className="xl:col-span-6 2xl:col-start-1 2xl:col-end-7">
+        <div className="container pb-10 md:pt-8 md:pb-20 xl:py-20">
+          <div className="grid lg:grid-cols-12 xl:gap-12">
+            <div className="lg:col-span-8">
               <Carousel images={displayImages} />
+              <div
+                className="mt-8"
+                dangerouslySetInnerHTML={{ __html: contentLinkFix }}
+              />
             </div>
 
-            <div className="xl:col-span-6">
-              <div dangerouslySetInnerHTML={{ __html: content }} />
-              <ul className="list-none p-0 mb-4 flex items-center flex-wrap gap-2">
+            <div className="lg:col-span-3 lg:col-start-10">
+              <h4 className="mt-0">Project Tags</h4>
+              <ul className="list-none p-0 mb-8 flex items-center flex-wrap gap-3">
                 {projectTags.edges.map((tag) => {
                   return (
                     <li
                       key={tag.node.id}
-                      className="px-2 py-1 bg-neutral-100 text-xs"
+                      className="px-2 py-1 bg-neutral-600/75 text-xs rounded text-white"
                     >
                       {tag.node.name}
                     </li>
                   );
                 })}
               </ul>
+              <Sidebar />
             </div>
           </div>
         </div>

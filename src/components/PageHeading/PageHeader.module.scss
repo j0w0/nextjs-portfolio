@@ -1,0 +1,34 @@
+.page-heading {
+  @apply text-amber-400;
+  padding-top: 2rem;
+  padding-bottom: 20vw;
+  background-image: linear-gradient(
+    125deg,
+    rgba(85, 0, 101, 0.5),
+    rgba(65, 0, 103, 0.08)
+  );
+  mask: url("/images/mask-wave-bottom-mobile.svg") bottom/contain no-repeat,
+    linear-gradient(#fff 0 0);
+  -webkit-mask: url("/images/mask-wave-bottom-mobile.svg") bottom/contain
+      no-repeat,
+    linear-gradient(#fff 0 0);
+  mask-composite: destination-out;
+  -webkit-mask-composite: destination-out;
+
+  @media (min-width: 768px) {
+    padding-top: 3rem;
+    padding-bottom: 8%;
+    mask: url("/images/mask-wave-bottom-desktop.svg") bottom/contain repeat-x,
+      linear-gradient(#fff 0 0);
+    -webkit-mask: url("/images/mask-wave-bottom-desktop.svg") bottom/contain
+        repeat-x,
+      linear-gradient(#fff 0 0);
+    mask-size: 50vw;
+    -webkit-mask-size: 50vw;
+  }
+
+  @media (min-width: 3000px) {
+    mask-size: 50vw;
+    -webkit-mask-size: 50vw;
+  }
+}

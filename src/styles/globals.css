@@ -1,13 +1,13 @@
 @import "./tailwind-base.css";
+@import "./carousel.css";
 @tailwind components;
 @tailwind utilities;
-@import "./carousel.css";
 
-#__next {
+.j0w0__wrapper {
   @apply flex flex-col min-h-screen;
 }
 
-#__next > main {
+.j0w0__wrapper > main {
   @apply flex-1;
 }
 

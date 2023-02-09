@@ -8,16 +8,18 @@ export default function Header() {
     <header
       className={`
       bg-amber-400
+      text-neutral-900
         px-4
         py-1
         flex
         justify-between
         items-center
-        sticky
-        top-0
+        fixed
+        w-full
         shadow
         drop-shadow
         z-10
+        site-header
       `}
     >
       <Link
@@ -29,7 +31,7 @@ export default function Header() {
           className="w-10 h-10"
           alt="Josh Woodcock, Front-End Developer"
         />
-        <h1 className="text-lg leading-none tracking-tight">
+        <h1 className="text-lg leading-none tracking-tight text-neutral-900">
           Josh Woodcock
           <br />
           Front-End Developer
