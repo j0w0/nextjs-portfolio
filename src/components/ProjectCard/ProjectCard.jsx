@@ -5,6 +5,14 @@ export default function ProjectCard({ project }) {
   const { mediaItemUrl, altText, mediaDetails, blurDataURL } =
     project.featuredImage;
 
+  const projectContent = project.content.replace(/(<([^>]+)>)/gi, "");
+  const excerptLength = 150;
+
+  const excerpt =
+    projectContent.length > excerptLength
+      ? projectContent.slice(0, excerptLength - 1) + "&hellip;"
+      : projectContent;
+
   return (
     <div>
       <Link
@@ -29,10 +37,10 @@ export default function ProjectCard({ project }) {
           {project.title}
         </h3>
       </Link>
-      <p className="mt-3 text-sm text-neutral-300">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a
-        dui non metus auctor sodales at nec quam.
-      </p>
+      <p
+        className="mt-3 text-sm text-neutral-300"
+        dangerouslySetInnerHTML={{ __html: excerpt }}
+      ></p>
     </div>
   );
 }

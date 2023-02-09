@@ -73,7 +73,6 @@ export async function getStaticProps() {
     })
   ).then((values) => values);
 
-  // greeting
   const GREETINGS = ["Hello", "Hi", "Hey"];
   const randomIdx = Math.floor(Math.random() * GREETINGS.length);
   const greeting = GREETINGS[randomIdx];

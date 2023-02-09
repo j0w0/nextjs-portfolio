@@ -15,7 +15,6 @@
 
 .ufo-scene {
   position: relative;
-  z-index: -1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +23,6 @@
 
 .ufo__svg {
   position: relative;
-  z-index: 1;
   height: 40%;
 
   @media (min-width: 768px) {
@@ -63,6 +61,7 @@
 
 .ufo__beam {
   margin-top: -5px;
+  flex: 1;
 }
 
 .ufo__cow {
@@ -70,6 +69,7 @@
   bottom: 25%;
   height: 10%;
   width: auto;
+  z-index: -1;
 }
 
 .floating {

@@ -9,7 +9,7 @@
 }
 
 .carousel .control-dots {
-  @apply flex flex-row flex-wrap gap-3 justify-center relative;
+  @apply flex flex-row flex-wrap gap-3 justify-start relative;
 }
 
 .carousel .control-dots .dot {

@@ -112,7 +112,7 @@
 /* ===== PROJECTS ===== */
 
 .projects__container {
-  @apply container pb-12;
+  @apply container pb-12 md:pt-8 md:pb-16;
 
   .projects__heading {
     @apply text-3xl mb-12 text-amber-400;

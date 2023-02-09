@@ -6,16 +6,12 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const PATHS = [
   {
-    href: "/about",
-    name: "about",
-  },
-  {
     href: "/work",
-    name: "work",
+    name: "Web Development Work",
   },
   {
-    href: "/contact",
-    name: "contact",
+    href: "/about",
+    name: "About Josh",
   },
 ];
 

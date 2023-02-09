@@ -9,11 +9,12 @@ const RocketImage = () => {
       height="550"
       src="/images/rocket-with-flames.svg"
       alt="rocketship"
+      className={styles.rumble}
     />
   );
 };
 
-export default function Footer({ isHome }) {
+export default function Footer() {
   return (
     <footer>
       <div className={styles.rocket__mobile}>
@@ -27,18 +28,18 @@ export default function Footer({ isHome }) {
               <RocketImage />
             </div>
             <div className={styles.column_2}>
-              <h3>E.T. Phone Home</h3>
-              <p>
+              <h3>Ready for launch?</h3>
+              <p className="text-xl">
                 Contact me on{" "}
                 <a
                   href="https://www.linkedin.com/in/j0w0/"
-                  targe="_blank"
+                  target="_blank"
                   rel="noreferrer"
                 >
                   LinkedIn
                 </a>
                 ,{" "}
-                <a href="//resume.j0w0.com" targe="_blank" rel="noreferrer">
+                <a href="//resume.j0w0.com" target="_blank" rel="noreferrer">
                   view my resume
                 </a>
                 , or use the form below to send me a message.
@@ -48,12 +49,11 @@ export default function Footer({ isHome }) {
           </div>
         </div>
 
-        <div className={styles.footer__ground}></div>
-      </div>
-
-      <div className={styles.footer__bottom}>
-        <div>Josh Woodcock {"//"} Front-End Developer</div>
-        <div>🏳️‍🌈✌🏼</div>
+        {/* <div className={styles.footer__ground}></div> */}
+        <div className={styles.footer__bottom}>
+          <div>Josh Woodcock {"//"} Front-End Developer</div>
+          <div>🏳️‍🌈✌🏼</div>
+        </div>
       </div>
     </footer>
   );

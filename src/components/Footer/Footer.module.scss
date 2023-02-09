@@ -30,11 +30,6 @@
       linear-gradient(#fff 0 0);
     -webkit-mask: url("/images/mask-wave-top-desktop.svg") top/contain repeat-x,
       linear-gradient(#fff 0 0);
-    mask-size: 100vw;
-    -webkit-mask-size: 100vw;
-  }
-
-  @media (min-width: 3000px) {
     mask-size: 50vw;
     -webkit-mask-size: 50vw;
   }
@@ -42,8 +37,8 @@
 
 .footer__container {
   @apply container;
-  @apply pt-96 md:pt-[13vw];
-  @apply pb-10 md:pb-8;
+  @apply pt-96 md:pt-32 lg:pt-40 xl:pt-44;
+  @apply pb-10 md:pb-16 lg:pb-12 xl:pb-8;
 
   @media (min-width: 3000px) {
     padding-top: 5.5vw;
@@ -81,7 +76,7 @@
 }
 
 .footer__ground {
-  background-image: url("/images/ground2.svg");
+  background-image: url("/images/ground.svg");
   background-size: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -89,8 +84,43 @@
 }
 
 .footer__bottom {
-  @apply bg-[#b2b2b2] bg-[url('/bg-stardust.png')] bg-center;
-  @apply text-black;
-  @apply p-4 pb-5;
+  @apply bg-[#39284a] bg-[url('/bg-stardust.png')] bg-center;
+  @apply text-white;
+  @apply p-4 pt-10 pb-5 md:pt-12 lg:pt-16 xl:pt-20;
   @apply flex flex-row justify-between;
+  @apply md:mt-8;
+
+  mask: url("/images/mask-footer.svg") top/cover no-repeat,
+    linear-gradient(#fff 0 0);
+  -webkit-mask: url("/images/mask-footer.svg") top/cover no-repeat,
+    linear-gradient(#fff 0 0);
+  mask-composite: destination-out;
+  -webkit-mask-composite: destination-out;
+  mask-size: 100vw;
+  -webkit-mask-size: 100vw;
+}
+
+.rumble {
+  animation-name: rumble;
+  animation-duration: 0.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes rumble {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+  75% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

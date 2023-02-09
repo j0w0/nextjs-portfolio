@@ -1,4 +1,3 @@
-import ContactForm from "../components/ContactForm/ContactForm";
 import HTMLHead from "../components/HTMLHead/HTMLHead";
 import PageHeading from "../components/PageHeading/PageHeading";
 import Sidebar from "../components/Sidebar/Sidebar";
@@ -11,20 +10,14 @@ export default function Contact({ page }) {
       <HTMLHead title={title} />
       <PageHeading title={title} />
       <section className="flex flex-col">
-        <div className="container py-10">
-          <div
-            className="
-            grid
-            lg:grid-cols-4
-            lg:gap-6
-            xl:gap-8
-            "
-          >
-            <div className="lg:col-span-3">
+        <div className="container pt-5 pb-12 lg:pt-16 lg:pb-20">
+          <div className="grid lg:grid-cols-12 xl:gap-12">
+            <div className="lg:col-span-8">
               <div dangerouslySetInnerHTML={{ __html: content }} />
-              {slug === "contact" && <ContactForm />}
             </div>
-            <Sidebar />
+            <div className="lg:col-span-3 lg:col-start-10">
+              <Sidebar />
+            </div>
           </div>
         </div>
       </section>
@@ -43,9 +36,13 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const pages = await getPages();
+  let pages = await getPages();
 
-  const pagePaths = pages.map((page) => {
+  const newPages = pages.filter((page) => {
+    return page?.node?.slug !== "contact";
+  });
+
+  const pagePaths = newPages.map((page) => {
     return {
       params: {
         slug: page?.node?.slug,

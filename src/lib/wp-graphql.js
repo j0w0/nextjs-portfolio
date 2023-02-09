@@ -37,6 +37,7 @@ export async function getInteractivePortfolioPosts(count = 20) {
                 databaseId
                 slug
                 title
+                content
                 websiteUrl
                 featuredImage {
                   node {
@@ -79,6 +80,7 @@ export async function getRandomProjects(count = 4) {
           databaseId
           slug
           title
+          content
           websiteUrl
           featuredImage {
             node {
