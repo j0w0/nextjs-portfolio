@@ -22,8 +22,8 @@
     linear-gradient(#fff 0 0);
   -webkit-mask: url("/images/mask-wave-top-mobile.svg") top/contain no-repeat,
     linear-gradient(#fff 0 0);
-  mask-composite: destination-out;
-  -webkit-mask-composite: destination-out;
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
 
   @media (min-width: 768px) {
     mask: url("/images/mask-wave-top-desktop.svg") top/contain repeat-x,
@@ -94,8 +94,8 @@
     linear-gradient(#fff 0 0);
   -webkit-mask: url("/images/mask-footer.svg") top/cover no-repeat,
     linear-gradient(#fff 0 0);
-  mask-composite: destination-out;
-  -webkit-mask-composite: destination-out;
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
   mask-size: 100vw;
   -webkit-mask-size: 100vw;
 }
