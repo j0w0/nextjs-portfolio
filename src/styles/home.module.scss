@@ -12,8 +12,8 @@
   -webkit-mask: url("/images/mask-wave-bottom-mobile.svg") bottom/contain
       no-repeat,
     linear-gradient(#fff 0 0);
-  mask-composite: destination-out;
-  -webkit-mask-composite: destination-out;
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
 
   @media (min-width: 768px) {
     height: unset;
