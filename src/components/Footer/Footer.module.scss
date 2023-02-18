@@ -6,7 +6,7 @@
   img {
     position: absolute;
     top: 0;
-    width: 50%;
+    width: 100%;
     max-width: 250px;
     z-index: 1;
   }
@@ -36,8 +36,9 @@
 }
 
 .footer__container {
+  padding-top: 400px;
   @apply container;
-  @apply pt-96 md:pt-32 lg:pt-40 xl:pt-44;
+  @apply md:pt-32 lg:pt-40 xl:pt-44;
   @apply pb-10 md:pb-16 lg:pb-12 xl:pb-8;
 
   @media (min-width: 3000px) {
@@ -85,7 +86,7 @@
 
 .footer__bottom {
   @apply bg-[#39284a] bg-[url('/bg-stardust.png')] bg-center;
-  @apply text-white;
+  @apply text-[#a38da9];
   @apply p-4 pt-10 pb-5 md:pt-12 lg:pt-16 xl:pt-20;
   @apply flex flex-row justify-between;
   @apply md:mt-8;
