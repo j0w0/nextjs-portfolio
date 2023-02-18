@@ -2,6 +2,7 @@
 
 .atf {
   height: calc(100vh - var(--j0w0-header-height));
+  min-height: -webkit-fill-available;
   background-image: linear-gradient(
     125deg,
     rgba(85, 0, 101, 0.5),
