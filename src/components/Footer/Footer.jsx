@@ -51,7 +51,7 @@ export default function Footer() {
 
         {/* <div className={styles.footer__ground}></div> */}
         <div className={styles.footer__bottom}>
-          <div>Josh Woodcock {"//"} Front-End Developer</div>
+          <div>Designed + Developed by Josh Woodcock</div>
           <div>🏳️‍🌈✌🏼</div>
         </div>
       </div>
