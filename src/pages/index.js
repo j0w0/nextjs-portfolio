@@ -9,7 +9,10 @@ import styles from "../styles/home.module.scss";
 export default function Home({ page, projects }) {
   return (
     <>
-      <HTMLHead title="Josh Woodcock // Front-End Developer" home={true} />
+      <HTMLHead
+        title="Josh Woodcock // Full-Stack Software Engineer"
+        home={true}
+      />
 
       <section className={styles.atf}>
         <div className={styles.atf__container}>
