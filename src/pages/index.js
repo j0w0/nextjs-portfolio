@@ -24,9 +24,9 @@ export default function Home({ page, projects }) {
 
           <div className={styles.atf__intro}>
             <p>
-              I am a Front-End Developer experienced in building websites and
-              web app user interfaces. I enjoy engineering solutions to improve
-              efficiency and automate processes.
+              I am a Full-Stack Software Engineer experienced in building
+              websites and web app user interfaces. I enjoy engineering
+              solutions to improve efficiency and automate processes.
             </p>
             <div className={styles.buttons}>
               <ButtonLink href="/work" text="View My Work" internal={true} />
