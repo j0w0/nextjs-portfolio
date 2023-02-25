@@ -15,7 +15,7 @@ export default function Home({ page, projects }) {
         <div className={styles.atf__container}>
           <div className={styles.atf__greeting}>
             <h1>{page.greeting}, I’m Josh</h1>
-            <h2>Front-End Developer</h2>
+            <h2>Software Engineer</h2>
           </div>
 
           <div className={styles.atf__ufo}>
@@ -24,9 +24,9 @@ export default function Home({ page, projects }) {
 
           <div className={styles.atf__intro}>
             <p>
-              I am a Full-Stack Software Engineer experienced in building
-              websites and web app user interfaces. I enjoy engineering
-              solutions to improve efficiency and automate processes.
+              I am a Full-Stack Developer with a front-end focus, experienced in
+              building websites and web app user interfaces that improve
+              efficiency and automate processes.
             </p>
             <div className={styles.buttons}>
               <ButtonLink href="/work" text="View My Work" internal={true} />
