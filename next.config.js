@@ -13,6 +13,11 @@ const nextConfig = {
         hostname: "j0w0-wordpress.local",
         pathname: "/wp-content/uploads/**",
       },
+      {
+        protocol: "https",
+        hostname: "j0w0-wordpress.local",
+        pathname: "/wp-content/uploads/**",
+      },
     ],
   },
 };

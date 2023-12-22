@@ -16,13 +16,11 @@
 
   @media (min-width: 768px) {
     height: unset;
-    mask: url("/images/mask-wave-bottom-desktop.svg") bottom/contain repeat-x,
+    mask-image: url("/images/mask-wave-bottom-desktop.svg"),
       linear-gradient(#fff 0 0);
-    -webkit-mask: url("/images/mask-wave-bottom-desktop.svg") bottom/contain
-        repeat-x,
+    -webkit-mask-image: url("/images/mask-wave-bottom-desktop.svg"),
       linear-gradient(#fff 0 0);
-    mask-size: 100vw;
-    -webkit-mask-size: 100vw;
+    mask-repeat: repeat-x;
   }
 
   @media (min-width: 3000px) {

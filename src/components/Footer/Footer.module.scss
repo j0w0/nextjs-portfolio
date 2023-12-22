@@ -26,10 +26,11 @@
   -webkit-mask-composite: xor;
 
   @media (min-width: 768px) {
-    mask: url("/images/mask-wave-top-desktop.svg") top/contain repeat-x,
+    mask-image: url("/images/mask-wave-top-desktop.svg"),
       linear-gradient(#fff 0 0);
-    -webkit-mask: url("/images/mask-wave-top-desktop.svg") top/contain repeat-x,
+    -webkit-mask-image: url("/images/mask-wave-top-desktop.svg"),
       linear-gradient(#fff 0 0);
+    mask-repeat: repeat-x;
     mask-size: 50vw;
     -webkit-mask-size: 50vw;
   }
