@@ -21,6 +21,7 @@
 .ufo__svg {
   position: relative;
   width: 75%;
+  z-index: 1;
 
   @media (min-width: 768px) {
     width: 100%;
@@ -65,12 +66,13 @@
 }
 
 .ufo__beam {
-  margin-top: -5px;
   flex: 1;
   width: 50%;
+  transform: scale(1.4);
 
   @media (min-width: 768px) {
     width: unset;
+    overflow: visible;
   }
 }
 
