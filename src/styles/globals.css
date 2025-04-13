@@ -12,7 +12,6 @@
 }
 
 img.alignleft {
-  /* @apply float-left w-auto mr-4 mb-4; */
   @apply float-left mr-4 mb-4;
   max-width: 215px;
 }
