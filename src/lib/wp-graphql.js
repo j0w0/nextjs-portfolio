@@ -128,7 +128,7 @@ export async function getPortfolioPost(slug) {
           altText
           mediaItemUrl
           mediaDetails {
-            sizes(include: _16_BY_9_CROP_MD) {
+            sizes {
               height
               name
               sourceUrl
@@ -145,7 +145,7 @@ export async function getPortfolioPost(slug) {
             altText
             mediaItemUrl
             mediaDetails {
-              sizes(include: _16_BY_9_CROP_MD) {
+              sizes {
                 height
                 name
                 sourceUrl

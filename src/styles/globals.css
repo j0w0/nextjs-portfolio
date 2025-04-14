@@ -1,5 +1,4 @@
 @import "./tailwind-base.css";
-@import "./carousel.css";
 @tailwind components;
 @tailwind utilities;
 
