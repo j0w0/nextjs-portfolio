@@ -1,4 +1,5 @@
-import Carousel from "../../components/Carousel/Carousel";
+// import Carousel from "../../components/Carousel/Carousel";
+import CarouselLightbox from "../../components/CarouselLightbox/CarouselLightbox";
 import HTMLHead from "../../components/HTMLHead/HTMLHead";
 import PageHeading from "../../components/PageHeading/PageHeading";
 import Sidebar from "../../components/Sidebar/Sidebar";
@@ -33,7 +34,8 @@ export default function Post({ post }) {
         <div className="container pb-10 md:pt-8 md:pb-20 xl:py-20">
           <div className="grid lg:grid-cols-12 xl:gap-12">
             <div className="lg:col-span-8">
-              <Carousel images={displayImages} />
+              {/* <Carousel images={displayImages} /> */}
+              <CarouselLightbox images={displayImages} />
               <div
                 className="mt-8"
                 dangerouslySetInnerHTML={{ __html: contentLinkFix }}
