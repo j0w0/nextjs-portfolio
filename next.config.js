@@ -10,12 +10,12 @@ const nextConfig = {
       },
       {
         protocol: "http",
-        hostname: "j0w0-wordpress.local",
+        hostname: "j0w0-wordpress.j0w0",
         pathname: "/wp-content/uploads/**",
       },
       {
         protocol: "https",
-        hostname: "j0w0-wordpress.local",
+        hostname: "j0w0-wordpress.j0w0",
         pathname: "/wp-content/uploads/**",
       },
     ],
