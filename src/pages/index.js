@@ -10,7 +10,7 @@ export default function Home({ page, projects }) {
   return (
     <>
       <HTMLHead
-        title="Josh Woodcock // Full-Stack Software Engineer"
+        title="Josh Woodcock // Front-End Software Engineer"
         home={true}
       />
 
@@ -18,7 +18,7 @@ export default function Home({ page, projects }) {
         <div className={styles.atf__container}>
           <div className={styles.atf__greeting}>
             <h1>{page.greeting}, I’m Josh</h1>
-            <h2>Software Engineer</h2>
+            <h2>Front-End Software Engineer</h2>
           </div>
 
           <div className={styles.atf__ufo}>
@@ -27,9 +27,10 @@ export default function Home({ page, projects }) {
 
           <div className={styles.atf__intro}>
             <p>
-              I am a Full-Stack Developer with a front-end focus, experienced in
+              I am a Front-End Software Engineer with 5+ years of experience in
               building websites and web app user interfaces that improve
-              efficiency and automate processes.
+              efficiency, automate processes, and generate leads for both B2B
+              and B2C marketing, advertising, and sales teams.
             </p>
             <div className={styles.buttons}>
               <ButtonLink href="/work" text="View My Work" internal={true} />
