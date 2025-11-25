@@ -29,12 +29,12 @@ export default function Header() {
         <Image
           src={Logo}
           className="w-10 h-10"
-          alt="Josh Woodcock, Front-End Software Engineer"
+          alt="Josh Woodcock, Software Engineer"
         />
         <h1 className="text-lg leading-none tracking-tight text-neutral-900">
           Josh Woodcock
           <br />
-          Front-End Software Engineer
+          Software Engineer
         </h1>
       </Link>
       <Navigation />
