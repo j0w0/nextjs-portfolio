@@ -9,13 +9,16 @@ import styles from "../styles/home.module.scss";
 export default function Home({ page, projects }) {
   return (
     <>
-      <HTMLHead title="Josh Woodcock // Software Engineer" home={true} />
+      <HTMLHead
+        title="Josh Woodcock // Front-End Software Engineer"
+        home={true}
+      />
 
       <section className={styles.atf}>
         <div className={styles.atf__container}>
           <div className={styles.atf__greeting}>
             <h1>{page.greeting}, I’m Josh</h1>
-            <h2>Software Engineer</h2>
+            <h2>Front-End Software Engineer</h2>
           </div>
 
           <div className={styles.atf__ufo}>
@@ -24,11 +27,10 @@ export default function Home({ page, projects }) {
 
           <div className={styles.atf__intro}>
             <p>
-              Software Engineer specializing in front-end development with 5+
-              years of experience building websites and web application
-              interfaces that enhance efficiency, streamline processes, and
-              drive lead generation for B2B and B2C marketing, advertising, and
-              sales teams.
+              Front-End Software Engineer with 5+ years of experience in
+              building websites and web app user interfaces that improve
+              efficiency, automate processes, and generate leads for both B2B
+              and B2C marketing, advertising, and sales teams.
             </p>
             <div className={styles.buttons}>
               <ButtonLink href="/work" text="View My Work" internal={true} />
